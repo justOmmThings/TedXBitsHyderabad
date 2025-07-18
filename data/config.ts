@@ -3,7 +3,7 @@
 export const config = {
     // Image Paths
     images: {
-        logo: "data/logos/tedxlogo.jpeg",
+        logo: "data/logo-white.png",
         sponsorLogos: [
             "data/logos/microsoft.png",
             "data/logos/twitch.png",
@@ -72,56 +72,103 @@ export const config = {
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque.",
             members: [
                 {
-                    name: "Alice Johnson",
+                    name: "Aizen Sosuke",
                     role: "Curator",
-                    photo: "/data/placeholder-user.jpg",
-                    quote: "Ideas are the currency of the future.",
+                    photo: "data/aizen png.jpg",
+                    quote: "Yokoso. Watashino soul society des.",
                     linkedin: "https://linkedin.com/in/alice",
                     contactInfo: "alice@tedx.com",
                 },
                 {
-                    name: "Bob Williams",
+                    name: "Ichigo Kurosaki",
                     role: "Speaker Curator",
-                    photo: "/data/placeholder-user.jpg",
-                    quote: "Every voice has a story worth sharing.",
+                    photo: "data/kindpng_4521044.png",
+                    quote: "Bankai",
                     linkedin: "https://linkedin.com/in/bob",
                     contactInfo: "bob@tedx.com",
                 },
                 {
-                    name: "Charlie Brown",
-                    role: "Logistics Head",
-                    photo: "/data/placeholder-user.jpg",
-                    quote: "Seamless execution, impactful ideas.",
+                    name: "Kisuke Urahara",
+                    role: "",
+                    photo: "data/PikPng.com_bleach-png_2927872.png",
+                    quote: "Bankai Konin Biraki Benihime Aratame",
                     linkedin: "https://linkedin.com/in/charlie",
                     contactInfo: "charlie@tedx.com",
                 },
                 {
-                    name: "Diana Miller",
+                    name: "Zaraki Kenpachi",
                     role: "Marketing Lead",
-                    photo: "/data/placeholder-user.jpg",
+                    photo: "/data/PikPng.com_kenpachi-zaraki-png_4048741.png",
                     quote: "Spreading ideas, one story at a time.",
                     linkedin: "https://linkedin.com/in/diana",
                     contactInfo: "diana@tedx.com",
                 },
                 {
-                    name: "Eve Davis",
+                    name: "Ichibe Hyosube",
                     role: "Volunteer Coordinator",
                     photo: "/data/placeholder-user.jpg",
-                    quote: "The power of community drives us.",
+                    quote: "Ichimonji",
                     linkedin: "https://linkedin.com/in/eve",
                     contactInfo: "eve@tedx.com",
                 },
                 {
-                    name: "Frank White",
+                    name: "Yamamoto Genryusai",
                     role: "Design Lead",
                     photo: "/data/placeholder-user.jpg",
-                    quote: "Visualizing ideas, inspiring minds.",
+                    quote: "Bankai Zanka no Tachi",
+                    linkedin: "https://linkedin.com/in/frank",
+                    contactInfo: "frank@tedx.com",
+                },
+                {
+                    name: "Kyoraku Shunsui",
+                    role: "Design Lead",
+                    photo: "/data/placeholder-user.jpg",
+                    quote: "Bankai Katen Kyōkotsu: Karamatsu Shinjū",
                     linkedin: "https://linkedin.com/in/frank",
                     contactInfo: "frank@tedx.com",
                 },
             ],
         },
     },
+
+    // Previous Speakers (Testimonials)
+    previousSpeakers: [
+        {
+            quote:
+                "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+            name: "Sarah Chen",
+            designation: "Product Manager at TechFlow",
+            src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+            name: "Michael Rodriguez",
+            designation: "CTO at InnovateSphere",
+            src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+            name: "Emily Watson",
+            designation: "Operations Director at CloudScale",
+            src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+            name: "James Kim",
+            designation: "Engineering Lead at DataPro",
+            src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+            quote:
+                "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+            name: "Lisa Thompson",
+            designation: "VP of Technology at FutureNet",
+            src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+    ],
 
     // Navigation URLs
     navigation: [
@@ -220,5 +267,68 @@ export const config = {
             border: 'hsl(var(--sidebar-border))',
             ring: 'hsl(var(--sidebar-ring))',
         },
+    },
+
+    // Footer Config
+    footer: {
+        logo: "data/logo-white.png",
+        campusImage: "data/bitshydnew.png",
+        copyright: "© TEDxBITSHyderabad 2025",
+        socialLinks: [
+            { icon: "facebook", url: "#" },
+            { icon: "instagram", url: "#" },
+            { icon: "close", url: "#" },
+            { icon: "linkedin", url: "#" },
+            { icon: "youtube", url: "#" },
+            { icon: "dots", url: "#" },
+        ],
+        leftLinks: [
+            { label: "EVENTS", url: "#" },
+            { label: "ABOUT", url: "#" },
+            { label: "CONTACT US", url: "#" },
+            { label: "ATTENDEE RULES & REGULATIONS", url: "#" },
+        ],
+        rightLinks: [
+            { label: "VOLUNTEER", url: "#" },
+            { label: "NOMINATE SPEAKER", url: "#" },
+            { label: "SPONSOR", url: "#" },
+            { label: "PRESS / MEDIA COVERAGE", url: "#" },
+        ],
+    },
+
+    // Homepage Below Header Section
+    homepageBelowHeader: {
+        sectionTitles: [
+            { text: "A" },
+            { text: "DECADE" },
+            { text: "OF" },
+            { text: "IMPACT", color: "#eb0027" },
+        ],
+        stats: [
+            { value: 28, label: "EVENTS" },
+            { value: 15000, label: "ATTENDEES" },
+            { value: 100, label: "SOCIAL REACH", suffix: "K+" },
+            { value: 100, label: "SPEAKERS", suffix: "+" },
+            { value: 12.1, label: "VIEWS", suffix: "M+" },
+            { value: 10, label: "YEARS", suffix: "+" },
+        ],
+    },
+
+    // Homepage Above Footer Section
+    homepageAboveFooter: {
+        ctas: [
+            {
+                text: "Know someone who belongs on our Stage ?",
+                button: { label: "NOMINATE SPEAKER", link: "#" },
+            },
+            {
+                text: "Eager to be a part of TEDxBITSHyderabad ?",
+                button: { label: "BECOME A VOLUNTEER", link: "#" },
+            },
+            {
+                text: "Want to support TEDxBITSHyderabad as a sponsor ?",
+                button: { label: "PARTNER WITH US", link: "#" },
+            },
+        ],
     },
 }; 

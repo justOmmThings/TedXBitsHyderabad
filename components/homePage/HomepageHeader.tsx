@@ -55,7 +55,7 @@ export function HomepageHeader({ className, bgClassName }: HomepageHeaderProps) 
                     {/* Logo as homepage link, no text beside it */}
                     <Link href="/" className="flex items-center h-full" aria-label="Go to homepage">
                         <div className="flex items-center h-full">
-                            <div className="relative w-40 h-12 lg:w-56 lg:h-16 flex items-center">
+                            <div className="relative w-72 h-28 lg:w-96 lg:h-36 flex items-center">
                                 <Image src={config.images.logo} alt="TEDx BITS Hyderabad Logo" fill className="object-contain" priority />
                             </div>
                         </div>

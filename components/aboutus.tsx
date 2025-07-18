@@ -75,11 +75,6 @@ const SmoothScrollProvider = ({ children }: { children: ReactNode }) => {
             const lenis = new Lenis({
                 duration: 0.8, // Reduced duration for faster scroll
                 easing: (t: number) => t, // Linear easing for more direct feel
-                direction: "vertical",
-                gestureDirection: "vertical",
-                smooth: true,
-                mouseMultiplier: 2.0, // Increased for more aggressive mouse wheel scrolling
-                smoothTouch: true, // Enabled for smoother trackpad scrolling
                 touchMultiplier: 2.5, // Adjusted for smoother trackpad scrolling
                 infinite: false,
             })
@@ -145,7 +140,7 @@ function TransparentNavbar({ logoSrc, navLinks, registerText, registerHref }: Tr
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     {/* Logo as homepage link */}
                     <Link href="/" className="flex items-center h-full" aria-label="Go to homepage">
-                        <div className="relative w-40 h-12 lg:w-56 lg:h-16 flex items-center">
+                        <div className="relative w-72 h-28 lg:w-96 lg:h-36 flex items-center">
                             <Image
                                 src={logoSrc || "/placeholder.svg"}
                                 alt="TEDx BITS Hyderabad Logo"

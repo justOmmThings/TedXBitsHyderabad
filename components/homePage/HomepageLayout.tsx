@@ -1,5 +1,5 @@
 import { ReactNode, isValidElement } from "react"
-import { HomepageHeader } from "./HomepageHeader"
+import { NavigationBar } from "../NavigationBar"
 
 export function HomepageLayout({ children }: { children: ReactNode }) {
     // Check if AboutUs is being rendered as a child
@@ -19,7 +19,7 @@ export function HomepageLayout({ children }: { children: ReactNode }) {
     }
     return (
         <div className="flex flex-col min-h-[100dvh]">
-            <HomepageHeader bgClassName={bgClassName} />
+            <NavigationBar bgClassName={bgClassName} />
             <main className="flex-1">{children}</main>
         </div>
     )

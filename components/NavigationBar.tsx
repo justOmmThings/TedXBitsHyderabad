@@ -8,12 +8,12 @@ import { cn } from "@/lib/utils"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { config } from "@/data/config"
 
-interface HomepageHeaderProps {
+interface NavigationBarProps {
     className?: string
     bgClassName?: string
 }
 
-export function HomepageHeader({ className, bgClassName }: HomepageHeaderProps) {
+export function NavigationBar({ className, bgClassName }: NavigationBarProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
     const [isVisible, setIsVisible] = React.useState(true)
 
@@ -64,12 +64,12 @@ export function HomepageHeader({ className, bgClassName }: HomepageHeaderProps) 
                     <div className="hidden md:flex items-center ml-auto gap-8">
                         <motion.nav className="flex items-center space-x-8" style={{ y: yNav, opacity: opacityNav }}>
                             {config.navigation.slice(0, 4).map((nav) => (
-                                <Link key={nav.href} href={nav.href} className="text-base font-medium text-white transition-colors hover:text-red-300">
+                                <Link key={nav.href} href={nav.href} className="text-base font-medium text-white transition-colors hover:text-[#eb0027]">
                                     {nav.label}
                                 </Link>
                             ))}
                         </motion.nav>
-                        <Button asChild className={cn("bg-transparent border border-red-300 text-red-400 hover:bg-red-50 hover:border-red-400 hover:text-red-600 font-medium transition-all duration-300")}>
+                        <Button asChild className={cn("bg-transparent border border-[#eb0027] text-[#eb0027] hover:bg-[#eb0027] hover:border-[#eb0027] hover:text-white font-medium transition-all duration-300")}>
                             <Link href={config.navigation[4].href}>
                                 {config.ui.register}
                             </Link>
@@ -98,14 +98,14 @@ export function HomepageHeader({ className, bgClassName }: HomepageHeaderProps) 
                                 <Link
                                     key={nav.href}
                                     href={nav.href}
-                                    className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-md"
+                                    className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb0027] hover:bg-gray-50 rounded-md"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {nav.label}
                                 </Link>
                             ))}
                             <div className="px-3 py-2">
-                                <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white font-medium">
+                                <Button asChild className="w-full bg-[#eb0027] hover:bg-[#b8001d] text-white font-medium">
                                     <Link href={config.navigation[4].href} onClick={() => setIsMobileMenuOpen(false)}>
                                         {config.ui.register}
                                     </Link>

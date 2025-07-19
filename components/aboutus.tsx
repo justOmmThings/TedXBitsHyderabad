@@ -97,7 +97,7 @@ const SmoothScrollProvider = ({ children }: { children: ReactNode }) => {
 
 // --- NAVBAR COMPONENT ---
 /**
- * TransparentNavbar component, adapted from HomepageHeader.tsx.
+ * TransparentNavbar component, adapted from NavigationBar.tsx.
  * It is fixed at the top, transparent, and disappears as the user scrolls down.
  */
 interface TransparentNavbarProps {
@@ -157,7 +157,7 @@ function TransparentNavbar({ logoSrc, navLinks, registerText, registerHref }: Tr
                                 <Link
                                     key={nav.href}
                                     href={nav.href}
-                                    className="text-base font-medium text-white transition-colors hover:text-red-400"
+                                    className="text-base font-medium text-white transition-colors hover:text-[#eb0027]"
                                 >
                                     {nav.label}
                                 </Link>
@@ -165,7 +165,7 @@ function TransparentNavbar({ logoSrc, navLinks, registerText, registerHref }: Tr
                         </nav>
                         <Button
                             asChild
-                            className="bg-transparent border border-red-400 text-red-400 hover:bg-red-900/20 hover:border-red-500 hover:text-red-500 font-medium transition-all duration-300"
+                            className="bg-transparent border border-[#eb0027] text-[#eb0027] hover:bg-[#eb0027]/20 hover:border-[#b8001d] hover:text-[#b8001d] font-medium transition-all duration-300"
                         >
                             <Link href={registerHref}>{registerText}</Link>
                         </Button>
@@ -193,14 +193,14 @@ function TransparentNavbar({ logoSrc, navLinks, registerText, registerHref }: Tr
                                 <Link
                                     key={nav.href}
                                     href={nav.href}
-                                    className="block px-3 py-2 text-base font-medium text-gray-200 hover:text-red-400 hover:bg-gray-800 rounded-md"
+                                    className="block px-3 py-2 text-base font-medium text-gray-200 hover:text-[#eb0027] hover:bg-gray-800 rounded-md"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {nav.label}
                                 </Link>
                             ))}
                             <div className="px-3 py-2">
-                                <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white font-medium">
+                                <Button asChild className="w-full bg-[#eb0027] hover:bg-[#b8001d] text-white font-medium">
                                     <Link href={registerHref} onClick={() => setIsMobileMenuOpen(false)}>
                                         {registerText}
                                     </Link>
@@ -224,7 +224,7 @@ function ScrollProgressIndicator() {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 right-0 h-1 bg-[#dc2626] z-[51] origin-[0%]" // Higher z-index than navbar
+            className="fixed top-0 left-0 right-0 h-1 bg-[#eb0027] z-[51] origin-[0%]" // Higher z-index than navbar
             style={{ scaleX }}
         />
     )
@@ -256,7 +256,7 @@ function HeroSection({ text }: { text: { bold: string; rest: string } }) {
                 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center leading-tight px-4"
                 style={{ y, scale }}
             >
-                <span className="text-[#dc2626] uppercase">{text.bold}</span>
+                <span className="text-[#eb0027] uppercase">{text.bold}</span>
                 {text.rest.split("organization").map((part, index) => (
                     <React.Fragment key={index}>
                         {part}
@@ -306,7 +306,7 @@ function AboutTextSection({ aboutTED, aboutTEDx }: AboutTextSectionProps) {
                         <h2 className="text-6xl md:text-7xl font-bold mb-6 text-gray-100">
                             {" "}
                             {aboutTED.heading}
-                            <span className="text-[#dc2626] uppercase">{aboutTED.highlight}</span>
+                            <span className="text-[#eb0027] uppercase">{aboutTED.highlight}</span>
                         </h2>
                         <p className="text-2xl md:text-3xl text-gray-300 leading-relaxed">{aboutTED.text}</p>{" "}
                     </motion.div>
@@ -323,7 +323,7 @@ function AboutTextSection({ aboutTED, aboutTEDx }: AboutTextSectionProps) {
                         <h2 className="text-6xl md:text-7xl font-bold mb-6 text-gray-100">
                             {" "}
                             {aboutTEDx.heading}
-                            <span className="text-[#dc2626] uppercase">{aboutTEDx.highlight}</span>
+                            <span className="text-[#eb0027] uppercase">{aboutTEDx.highlight}</span>
                         </h2>
                         <p className="text-2xl md:text-3xl text-gray-300 leading-relaxed">{aboutTEDx.text}</p>{" "}
                     </motion.div>
@@ -387,7 +387,7 @@ function TeamMemberModal({ member, onClose }: TeamMemberModalProps) {
                             <h3 className="text-3xl font-bold text-white mb-2 md:hidden">{member.name}</h3>{" "}
                             {/* Show name on mobile */}
                             <p className="text-xl font-semibold text-gray-300 mb-4">{member.role}</p>
-                            <blockquote className="text-lg italic text-center md:text-left mb-6 border-l-4 border-[#dc2626] pl-4">
+                            <blockquote className="text-lg italic text-center md:text-left mb-6 border-l-4 border-[#eb0027] pl-4">
                                 &ldquo;{member.quote}&rdquo;
                             </blockquote>
                         </div>
@@ -398,7 +398,7 @@ function TeamMemberModal({ member, onClose }: TeamMemberModalProps) {
                                     href={member.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-red-400 hover:text-red-500 transition-colors mb-2"
+                                    className="flex items-center gap-2 text-[#eb0027] hover:text-[#b8001d] transition-colors mb-2"
                                 >
                                     <Linkedin className="w-6 h-6" />
                                     <span>LinkedIn Profile</span>
@@ -454,7 +454,7 @@ function TeamSection({ preHeading, mainHeading, teamLabel, description, members 
                 >
                     <p className="text-2xl md:text-3xl text-gray-400 font-light mb-2">{preHeading}</p>
                     <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-4">
-                        <span className="text-[#dc2626] uppercase">{mainHeading.bold}</span>
+                        <span className="text-[#eb0027] uppercase">{mainHeading.bold}</span>
                         {mainHeading.rest}
                     </h2>
                     <h3 className="text-7xl md:text-8xl font-extrabold text-gray-200 mb-8">{teamLabel}</h3>
@@ -466,7 +466,7 @@ function TeamSection({ preHeading, mainHeading, teamLabel, description, members 
                     {members.map((member, index) => (
                         <motion.button
                             key={member.name}
-                            className="text-8xl md:text-9xl font-bold hover:text-red-400 transition-colors duration-200 cursor-pointer"
+                            className="text-7xl md:text-8xl font-bold hover:text-[#eb0027] transition-colors duration-200 cursor-pointer"
                             whileHover={{ scale: 1.05, y: -5 }} // Subtle jump/bounce
                             whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.15 }} // Faster transition for hover/tap

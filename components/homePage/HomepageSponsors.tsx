@@ -76,7 +76,7 @@ export function HomepageSponsors({ className }: HomepageSponsorsProps) {
 
     return (
         <motion.section
-            className={cn("w-full py-16 md:py-20 lg:py-24 bg-black overflow-hidden", className)}
+            className={cn("w-full py-16 md:py-20 lg:py-24 bg-[#1f1f1f] overflow-hidden", className)}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

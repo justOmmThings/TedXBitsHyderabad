@@ -95,124 +95,7 @@ const SmoothScrollProvider = ({ children }: { children: ReactNode }) => {
     return <>{children}</>
 }
 
-// --- NAVBAR COMPONENT ---
-/**
- * TransparentNavbar component, adapted from NavigationBar.tsx.
- * It is fixed at the top, transparent, and disappears as the user scrolls down.
- */
-interface TransparentNavbarProps {
-    logoSrc: string
-    navLinks: { label: string; href: string }[]
-    registerText: string
-    registerHref: string
-}
 
-function TransparentNavbar({ logoSrc, navLinks, registerText, registerHref }: TransparentNavbarProps) {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-    const [isVisible, setIsVisible] = useState(true) // Controls visibility based on scroll
-
-    const { scrollYProgress } = useScroll()
-    // Navbar should be transparent and only visible at the very top, then disappear
-    // We use opacity to make it fade out as soon as scroll starts
-    const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]) // Fades out quickly
-    const y = useTransform(scrollYProgress, [0, 0.05], ["0%", "-100%"]) // Moves up quickly
-
-    useEffect(() => {
-        const handleScroll = () => {
-            // Navbar is visible only when scrollY is 0
-            setIsVisible(window.scrollY === 0)
-        }
-        window.addEventListener("scroll", handleScroll)
-        handleScroll() // Set initial state
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
-
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen)
-    }
-
-    return (
-        <motion.header
-            className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-            style={{ opacity, y, pointerEvents: isVisible ? "auto" : "none" }} // Disable pointer events when hidden
-        >
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16 lg:h-20">
-                    {/* Logo as homepage link */}
-                    <Link href="/" className="flex items-center h-full" aria-label="Go to homepage">
-                        <div className="relative w-72 h-28 lg:w-96 lg:h-36 flex items-center">
-                            <Image
-                                src={logoSrc || "/placeholder.svg"}
-                                alt="TEDx BITS Hyderabad Logo"
-                                fill
-                                className="object-contain"
-                                priority
-                            />
-                        </div>
-                    </Link>
-                    {/* Desktop Navigation + CTA Button */}
-                    <div className="hidden md:flex items-center ml-auto gap-8">
-                        <nav className="flex items-center space-x-8">
-                            {navLinks.map((nav) => (
-                                <Link
-                                    key={nav.href}
-                                    href={nav.href}
-                                    className="text-base font-medium text-white transition-colors hover:text-[#eb0027]"
-                                >
-                                    {nav.label}
-                                </Link>
-                            ))}
-                        </nav>
-                        <Button
-                            asChild
-                            className="bg-transparent border border-[#eb0027] text-[#eb0027] hover:bg-[#eb0027]/20 hover:border-[#b8001d] hover:text-[#b8001d] font-medium transition-all duration-300"
-                        >
-                            <Link href={registerHref}>{registerText}</Link>
-                        </Button>
-                    </div>
-                    {/* Mobile Menu Button */}
-                    <button
-                        onClick={toggleMobileMenu}
-                        className="md:hidden p-2 rounded-md transition-colors text-white"
-                        aria-label="Toggle mobile menu"
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            {isMobileMenuOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            )}
-                        </svg>
-                    </button>
-                </div>
-                {/* Mobile Menu */}
-                {isMobileMenuOpen && (
-                    <div className="md:hidden">
-                        <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 backdrop-blur-md rounded-lg mt-2 shadow-lg">
-                            {navLinks.map((nav) => (
-                                <Link
-                                    key={nav.href}
-                                    href={nav.href}
-                                    className="block px-3 py-2 text-base font-medium text-gray-200 hover:text-[#eb0027] hover:bg-gray-800 rounded-md"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    {nav.label}
-                                </Link>
-                            ))}
-                            <div className="px-3 py-2">
-                                <Button asChild className="w-full bg-[#eb0027] hover:bg-[#b8001d] text-white font-medium">
-                                    <Link href={registerHref} onClick={() => setIsMobileMenuOpen(false)}>
-                                        {registerText}
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </div>
-        </motion.header>
-    )
-}
 
 /**
  * ScrollProgressIndicator component displays a progress bar at the top of the page
@@ -498,12 +381,6 @@ export default function AboutUsPage() {
                 {/* Main content area with layers */}
                 <main className="relative w-full flex-1">
                     {/* Navbar (fixed, transparent, disappears on scroll) */}
-                    <TransparentNavbar
-                        logoSrc={config.images.logo}
-                        navLinks={config.navigation.slice(0, 4)} // Assuming first 4 are main nav links
-                        registerText={config.ui.register}
-                        registerHref={config.navigation[4].href} // Assuming last one is register
-                    />
 
                     {/* Scroll Progress Indicator */}
                     <ScrollProgressIndicator />

@@ -104,8 +104,8 @@ const Navigation = () => {
                         <X className="h-8 w-8 transition-all duration-150 group-hover:scale-110 group-hover:rotate-90" />
                     </button>
 
-                    {/* Navigation Links */}
-                    <div className="space-y-8">
+                    {/* Navigation Links + CTA Button */}
+                    <div className="flex flex-col items-center gap-12">
                         {navigation.map((item, index) => (
                             <div
                                 key={item.label}
@@ -130,24 +130,23 @@ const Navigation = () => {
                                 </Link>
                             </div>
                         ))}
-                    </div>
-
-                    {/* CTA Button */}
-                    <div className={`mt-16 transform transition-all duration-300 ease-out ${isMenuOpen
-                        ? 'translate-y-0 opacity-100'
-                        : 'translate-y-8 opacity-0'
-                        }`}
-                        style={{
-                            transitionDelay: isMenuOpen ? `${navigation.length * navigationConfig.animation.menuItemDelay + navigationConfig.animation.ctaDelay}ms` : '0ms'
-                        }}>
-                        <Link
-                            href={navigationConfig.registerButton.link}
-                            onClick={() => setIsMenuOpen(false)}
-                            className="group relative overflow-hidden bg-white/20 backdrop-blur-sm text-white px-16 py-6 rounded-full text-2xl md:text-3xl font-medium transition-all duration-200 hover:bg-white/30 hover:scale-110 hover:shadow-2xl hover:shadow-[#eb0027]/50 border border-white/30"
-                        >
-                            <span className="relative z-10">{navigationConfig.registerButton.text}</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#eb0027]/50 to-gray-600/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-full"></div>
-                        </Link>
+                        {/* CTA Button */}
+                        <div className={`mt-8 transform transition-all duration-300 ease-out ${isMenuOpen
+                            ? 'translate-y-0 opacity-100'
+                            : 'translate-y-8 opacity-0'
+                            }`}
+                            style={{
+                                transitionDelay: isMenuOpen ? `${navigation.length * navigationConfig.animation.menuItemDelay + navigationConfig.animation.ctaDelay}ms` : '0ms'
+                            }}>
+                            <Link
+                                href={navigationConfig.registerButton.link}
+                                onClick={() => setIsMenuOpen(false)}
+                                className="group relative overflow-hidden bg-white/20 backdrop-blur-sm text-white px-16 py-6 rounded-full text-2xl md:text-3xl font-medium transition-all duration-200 hover:bg-white/30 hover:scale-110 hover:shadow-2xl hover:shadow-[#eb0027]/50 border border-white/30"
+                            >
+                                <span className="relative z-10">{navigationConfig.registerButton.text}</span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#eb0027]/50 to-gray-600/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-full"></div>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Decorative Elements */}

@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className="bg-[#ec0024] text-white w-full overflow-x-hidden">
       <div className="w-full flex items-center justify-center align-center">
         {/*<img src="/tedxfootertext.png" className='w-[500px] h-[290px] mt-4'></img>*/}
-        <img src={`/${config.footer.campusImage}`} alt="CampusImage" className='w-full h-auto mt-10 opacity-80' />
+        <img src={`/${config.footer.campusImage}`} alt="CampusImage" className='w-full h-auto mt-10 opacity-60' />
       </div>
       <hr className="border-t border-white w-[1300px] my-2 mt-7 ml-9 opacity-60" />
       <div className="w-full mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
@@ -41,7 +41,7 @@ export default function Footer() {
             <Link href="#"><img src={`/${config.footer.logo}`} className='w-[400px] cursor-pointer'></img></Link>
           </div>
           <div className="text-[13px] mt-3 ml-6 ">{config.footer.copyright}</div>
-          <div className="flex gap-4 text-white text-xl mt-6 ml-6">
+          <div className="flex gap-4 text-white text-xl mt-6 ml-6 mb-6">
             {config.footer.socialLinks.map((item, idx) => (
               <Link href={item.url} key={idx}>{renderSocialIcon(item.icon)}</Link>
             ))}

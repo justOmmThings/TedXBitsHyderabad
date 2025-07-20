@@ -526,13 +526,11 @@ export const footer: FooterConfig = {
         { label: "GALLERY", url: "/events" },
         { label: "ABOUT", url: "/about" },
         { label: "CONTACT US", url: "#" },
-        { label: "ATTENDEE RULES & REGULATIONS", url: "#" },
+        
     ],
     rightLinks: [
-        { label: "VOLUNTEER", url: "#" },
-        { label: "NOMINATE SPEAKER", url: "#" },
         { label: "SPONSOR", url: "#" },
-        { label: "PRESS / MEDIA COVERAGE", url: "#" },
+        { label: "ATTENDEE RULES & REGULATIONS", url: "#" },
     ],
 };
 

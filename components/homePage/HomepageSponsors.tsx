@@ -38,7 +38,7 @@ export function HomepageSponsors({ className }: HomepageSponsorsProps) {
                 alt={alt}
                 width={180}
                 height={90}
-                className="max-h-[90px] w-auto"
+                className="max-h-[90px] w-auto filter grayscale"
             />
         </motion.div>
     )

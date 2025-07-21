@@ -42,7 +42,7 @@ export const SpeakerCarousel = ({
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/40 z-10" />
+      <div className="absolute inset-0 bg-white z-10" />
       
       {/* Main content */}
       <div className="relative z-20 flex flex-col min-h-screen">
@@ -94,7 +94,7 @@ export const SpeakerCarousel = ({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="text-white/80 text-xl md:text-2xl font-medium max-w-md"
+                  className="text-black/90 text-xl md:text-2xl font-medium max-w-md"
                 >
                   {speakers[active].title}
                 </motion.p>
@@ -104,7 +104,7 @@ export const SpeakerCarousel = ({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="text-white/60 text-lg max-w-lg leading-relaxed"
+                    className="text-black/60 text-lg max-w-lg leading-relaxed"
                   >
                     {speakers[active].description}
                   </motion.p>
@@ -121,15 +121,15 @@ export const SpeakerCarousel = ({
             >
               <button
                 onClick={handlePrev}
-                className="group flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/20 hover:border-red-500 hover:bg-red-500/10 transition-all duration-300"
+                className="group flex h-14 w-14 items-center justify-center rounded-full border-2 border-black/20 hover:border-red-500 hover:bg-red-500/10 transition-all duration-300"
               >
-                <IconArrowLeft className="h-6 w-6 text-white/70 group-hover:text-red-500 transition-colors duration-300" />
+                <IconArrowLeft className="h-6 w-6 text-black/70 group-hover:text-red-500 transition-colors duration-300" />
               </button>
               <button
                 onClick={handleNext}
-                className="group flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/20 hover:border-red-500 hover:bg-red-500/10 transition-all duration-300"
+                className="group flex h-14 w-14 items-center justify-center rounded-full border-2 border-black/20 hover:border-red-500 hover:bg-red-500/10 transition-all duration-300"
               >
-                <IconArrowRight className="h-6 w-6 text-white/70 group-hover:text-red-500 transition-colors duration-300" />
+                <IconArrowRight className="h-6 w-6 text-black/70 group-hover:text-red-500 transition-colors duration-300" />
               </button>
             </motion.div>
           </div>
@@ -177,9 +177,9 @@ export const SpeakerCarousel = ({
             {/* Left navigation for thumbnails */}
             <button
               onClick={handlePrev}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300"
             >
-              <IconArrowLeft className="h-4 w-4 text-white/50 hover:text-red-500" />
+              <IconArrowLeft className="h-4 w-4 text-black/50 hover:text-red-500" />
             </button>
 
             {/* Thumbnail images */}
@@ -223,9 +223,9 @@ export const SpeakerCarousel = ({
             {/* Right navigation for thumbnails */}
             <button
               onClick={handleNext}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300"
             >
-              <IconArrowRight className="h-4 w-4 text-white/50 hover:text-red-500" />
+              <IconArrowRight className="h-4 w-4 text-black/50 hover:text-red-500" />
             </button>
           </motion.div>
         </div>

@@ -55,9 +55,9 @@ const Navigation = () => {
                                 <Image
                                     src={`/${images.logo}`}
                                     alt="Logo"
-                                    width={218}
+                                    width={210}
                                     height={78}
-                                    className="object-contain h-16 w-auto"
+                                    className="object-contain h-12 w-auto"
                                     priority
                                 />
                             </div>

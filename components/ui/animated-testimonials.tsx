@@ -47,7 +47,7 @@ export const SpeakerCarousel = ({
       {/* Main content */}
       <div className="relative z-20 flex flex-col min-h-screen">
         {/* Top section - Main carousel */}
-        <div className="flex-1 flex">
+        <div className="flex-1 flex flex-col md:flex-row">
           {/* Left side - Speaker info */}
           <div className="flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-20">
             <AnimatePresence mode="wait">

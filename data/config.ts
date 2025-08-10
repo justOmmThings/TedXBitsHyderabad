@@ -184,6 +184,19 @@ export interface HomepageAboveFooterConfig {
     ctas: { text: string; button: { label: string; link: string } }[];
 }
 
+// --- Gallery Page ---
+export interface GallerySlide {
+    src: string;
+    alt: string;
+}
+
+export interface GalleryConfig {
+    heading: string;            // e.g. "Gallery"
+    highlight?: string;         // optional part of heading to color differently
+    description: string;        // lead paragraph under heading
+    slides: GallerySlide[];     // carousel slides
+}
+
 // =========================
 // Config Sections
 // =========================
@@ -400,7 +413,7 @@ export const previousSpeakers: Speaker[] = [
 
 // --- Navigation URLs ---
 export const navigation: NavigationLink[] = [
-    { label: "Gallery", href: "/events", icon: "Image" },
+    { label: "Gallery", href: "/gallery", icon: "Image" },
     { label: "Speakers", href: "/speakers", icon: "Users" },
     { label: "Executives", href: "/about", icon: "UserCheck" },
     { label: "Contact", href: "/contact", icon: "Mail" },
@@ -526,7 +539,7 @@ export const footer: FooterConfig = {
         { label: "GALLERY", url: "/events" },
         { label: "ABOUT", url: "/about" },
         { label: "CONTACT US", url: "#" },
-        
+
     ],
     rightLinks: [
         { label: "SPONSOR", url: "#" },
@@ -570,6 +583,40 @@ export const homepageAboveFooter: HomepageAboveFooterConfig = {
     ],
 };
 
+// --- Gallery Page Config ---
+export const gallery: GalleryConfig = {
+    heading: "Gallery",
+    highlight: "Gallery", // currently entire word highlighted; adjust if you want partial
+    description:
+        "From electrifying speaker experiences to moving performances and more, take a look at some of the all-time great moments that have molded our annual events and invigorated the incredible city we call home.",
+    slides: [
+        {
+            src: "/data/anna-dziubinska-mVhd5QVlDWw-unsplash.jpg",
+            alt: "Audience illuminated in warm light at a TEDx style event",
+        },
+        {
+            src: "/data/davide-ragusa-gcDwzUGuUoI-unsplash.jpg",
+            alt: "Silhouettes of people in a large hall with dramatic lighting",
+        },
+        {
+            src: "/data/henry-be-IicyiaPYGGI-unsplash.jpg",
+            alt: "Stage lights shining through atmospheric haze",
+        },
+        {
+            src: "/data/v2osk-1Z2niiBPg5A-unsplash.jpg",
+            alt: "Abstract architectural ceiling with geometric light pattern",
+        },
+        {
+            src: "/data/blake-verdoorn-cssvEZacHvQ-unsplash.jpg",
+            alt: "Audience illuminated in warm light at a TEDx style event",
+        },
+        {
+            src: "/data/johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
+            alt: "Audience illuminated in warm light at a TEDx style event",
+        },
+    ],
+};
+
 // =========================
 // Main Config Export
 // =========================
@@ -590,4 +637,5 @@ export const config = {
     footer,
     homepageBelowHeader,
     homepageAboveFooter,
+    gallery,
 }; 

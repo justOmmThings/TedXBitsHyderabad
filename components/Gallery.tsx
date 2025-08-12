@@ -6,10 +6,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { gallery as galleryConfig } from "@/data/config"
 
 export default function GalleryPage() {
-    const slides = React.useMemo(() => galleryConfig.slides, [])
+    const originalSlides = React.useMemo(() => galleryConfig.slides, [])
 
-    const [index, setIndex] = React.useState(0)
-    const count = slides.length
+    // Create infinite loop by duplicating slides: [slides, slides, slides]
+    const slides = React.useMemo(() => [
+        ...originalSlides,
+        ...originalSlides,
+        ...originalSlides
+    ], [originalSlides])
+
+    const originalCount = originalSlides.length
+    const [index, setIndex] = React.useState(originalCount) // Start at the middle set
+    const [isTransitioning, setIsTransitioning] = React.useState(true)
 
     // Drag / swipe handling state
     const [isDragging, setIsDragging] = React.useState(false)
@@ -17,12 +25,39 @@ export default function GalleryPage() {
     const startXRef = React.useRef<number | null>(null)
 
     const goPrev = React.useCallback(() => {
-        setIndex(prev => (prev - 1 + count) % count)
-    }, [count])
+        setIndex(prev => prev - 1)
+    }, [])
 
     const goNext = React.useCallback(() => {
-        setIndex(prev => (prev + 1) % count)
-    }, [count])
+        setIndex(prev => prev + 1)
+    }, [])
+
+    // Handle infinite loop by resetting position when reaching boundaries
+    React.useEffect(() => {
+        if (index >= originalCount * 2) {
+            // We've reached the end of the second set, jump to start of middle set
+            const timer = setTimeout(() => {
+                setIsTransitioning(false)
+                setIndex(originalCount)
+                // Re-enable transitions after a brief delay
+                requestAnimationFrame(() => {
+                    setIsTransitioning(true)
+                })
+            }, 350) // Match the transition duration
+            return () => clearTimeout(timer)
+        } else if (index < originalCount) {
+            // We've reached the start of the first set, jump to start of second set
+            const timer = setTimeout(() => {
+                setIsTransitioning(false)
+                setIndex(originalCount * 2 - 1)
+                // Re-enable transitions after a brief delay
+                requestAnimationFrame(() => {
+                    setIsTransitioning(true)
+                })
+            }, 350) // Match the transition duration
+            return () => clearTimeout(timer)
+        }
+    }, [index, originalCount])
 
     // Keyboard support: ArrowLeft / ArrowRight
     React.useEffect(() => {
@@ -72,11 +107,11 @@ export default function GalleryPage() {
     // Preload all images once (prevents perceived delay on first navigation)
     React.useEffect(() => {
         if (typeof window === 'undefined') return
-        slides.forEach(slide => {
+        originalSlides.forEach(slide => {
             const img = new window.Image()
             img.src = slide.src
         })
-    }, [slides])
+    }, [originalSlides])
 
     return (
         <main className="w-full relative overflow-hidden">
@@ -106,7 +141,7 @@ export default function GalleryPage() {
                     {/* Track */}
                     <div
                         id="carousel-track"
-                        className={`flex h-full will-change-transform ${isDragging ? '' : 'transition-transform duration-350 ease-out'}`}
+                        className={`flex h-full will-change-transform ${isDragging || !isTransitioning ? '' : 'transition-transform duration-350 ease-out'}`}
                         style={{ transform: `translateX(calc(-${index * 100}vw + ${dragOffset}px))` }}
                         aria-live="polite"
                     >
@@ -116,7 +151,7 @@ export default function GalleryPage() {
                                 className="relative h-full w-screen shrink-0 grow-0"
                                 role="group"
                                 aria-roledescription="slide"
-                                aria-label={`${i + 1} of ${count}`}
+                                aria-label={`${((i % originalCount) + 1)} of ${originalCount}`}
                             >
                                 <Image
                                     src={slide.src || "/placeholder.svg"}

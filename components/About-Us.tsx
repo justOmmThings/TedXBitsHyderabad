@@ -8,6 +8,7 @@ import { Dialog } from "@/components/ui/dialog" // Assuming shadcn Dialog
 import { Button } from "@/components/ui/button" // Assuming shadcn Button
 import { Linkedin } from "lucide-react" // Using Lucide React for LinkedIn icon
 import { config } from "@/data/config"
+import Footer from "@/components/Footer"
 
 // --- CONFIGURATION AND SETTINGS ---
 // These settings are defined here for easy access and modification.
@@ -319,10 +320,10 @@ function TeamSection({ preHeading, mainHeading, teamLabel, description, members 
     })
 
     // Parallax effect for the entire section content
-    const sectionY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]) // Adjusted range for noticeable effect
+    const sectionY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]) // Reduced range to lessen perceived overlap
 
     return (
-        <section ref={ref} className="relative py-32 md:py-48 bg-black text-white z-30">
+        <section ref={ref} className="relative py-32 md:py-48 pb-52 md:pb-72 bg-black text-white z-30">
             <motion.div
                 className="container mx-auto px-4 md:px-6 max-w-6xl text-center"
                 style={{ y: sectionY }} // Apply parallax to the entire content container
@@ -400,6 +401,11 @@ export default function AboutUsPage() {
                         members={aboutPageConfig.teamSection.members}
                     />
                 </main>
+                {/* Divider & Footer inside scroll provider to avoid layout height issues and overlap */}
+                <hr className="border-t border-neutral-800/60 w-full" />
+                <div className="relative z-40 mt-32 pb-10">
+                    <Footer />
+                </div>
             </div>
         </SmoothScrollProvider>
     )

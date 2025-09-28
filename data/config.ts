@@ -251,12 +251,12 @@ export const aboutSection: AboutSectionConfig = {
 export const aboutPageSection: AboutPageSectionConfig = {
     mainHeading: {
         bold: "TED",
-        rest: " is a nonprofit organization devoted to ideas worth spreading",
+        rest: " is a nonprofit devoted to ideas worth spreading",
     },
     aboutTED: {
         heading: "About ",
         highlight: "TED",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque.",
+        text: "TED is a nonprofit devoted to ideas worth spreading. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque.",
     },
     aboutTEDx: {
         heading: "About ",
@@ -415,8 +415,9 @@ export const previousSpeakers: Speaker[] = [
 export const navigation: NavigationLink[] = [
     { label: "Gallery", href: "/gallery", icon: "Image" },
     { label: "Speakers", href: "/speakers", icon: "Users" },
-    { label: "Executives", href: "/about", icon: "UserCheck" },
-    { label: "Contact", href: "/contact", icon: "Mail" },
+    { label: "Sponsors", href: "/sponsors", icon: "Users" },
+    { label: "Executives", href: "/executives", icon: "UserCheck" },
+    { label: "About Us", href: "/about", icon: "Mail" },
 
 ];
 

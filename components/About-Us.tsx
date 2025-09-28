@@ -392,20 +392,9 @@ export default function AboutUsPage() {
                     {/* Layer 2: About Text Columns */}
                     <AboutTextSection aboutTED={aboutPageConfig.aboutTED} aboutTEDx={aboutPageConfig.aboutTEDx} />
 
-                    {/* Layer 3: Team Members Section */}
-                    <TeamSection
-                        preHeading={aboutPageConfig.teamSection.preHeading}
-                        mainHeading={aboutPageConfig.teamSection.mainHeading}
-                        teamLabel={aboutPageConfig.teamSection.teamLabel}
-                        description={aboutPageConfig.teamSection.description}
-                        members={aboutPageConfig.teamSection.members}
-                    />
+
                 </main>
-                {/* Divider & Footer inside scroll provider to avoid layout height issues and overlap */}
-                <hr className="border-t border-neutral-800/60 w-full" />
-                <div className="relative z-40 mt-32 pb-10">
-                    <Footer />
-                </div>
+
             </div>
         </SmoothScrollProvider>
     )

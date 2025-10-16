@@ -263,7 +263,9 @@ export default function ExecutivesPage() {
                     />
                 </main>
 
-
+                <div className="relative z-10">
+                    <Footer />
+                </div>
             </div>
         </SmoothScrollProvider>
     )

@@ -3,6 +3,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import DotGrid from "@/components/ui/dot-grid"
+import Footer from "@/components/Footer"
 
 interface SponsorTier {
     title: string
@@ -162,93 +163,98 @@ const SponsorTierSection = ({ tier, index }: { tier: SponsorTier, index: number 
 
 export default function SponsorsPage() {
     return (
-        <div className="min-h-screen bg-[#0f0f0f] text-white overflow-hidden relative">
-            {/* Dot Grid Background */}
-            <div className="absolute inset-0 opacity-20">
+        <div className="relative flex flex-col min-h-[100dvh] bg-black text-white overflow-hidden">
+            {/* Background grid spanning entire page including footer */}
+            <div className="pointer-events-none fixed inset-0 z-0 opacity-100">
                 <DotGrid
-                    dotSize={18}
-                    gap={25}
-                    baseColor="#eb0027"
-                    activeColor="#ffffff"
-                    proximity={80}
-                    speedTrigger={50}
-                    shockRadius={150}
-                    shockStrength={3}
-                    className="w-full h-full"
+                    dotSize={20}
+                    gap={24}
+                    baseColor="#4a4a4a"
+                    activeColor="#eb0027"
+                    proximity={170}
+                    shockRadius={300}
+                    shockStrength={6}
+                    className="[mask-image:radial-gradient(circle_at_center,white,transparent_98%)]"
                 />
             </div>
 
-            {/* Hero Section */}
-            <motion.section
-                className="relative py-24 md:py-32 lg:py-40"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-            >
-                <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 via-transparent to-black/50" />
-                <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <motion.div
-                        className="text-center"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent">
-                            Our Sponsors
-                        </h1>
-                        <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-                            Meet the incredible organizations that make TEDxBITS Hyderabad possible.
-                            Their support drives innovation and spreads ideas worth sharing.
-                        </p>
-                    </motion.div>
-                </div>
-            </motion.section>
-
-            {/* Sponsor Tiers */}
-            {sponsorTiers.map((tier, index) => (
-                <SponsorTierSection key={tier.title} tier={tier} index={index} />
-            ))}
-
-            {/* Additional Sponsors Section */}
-            <motion.section
-                className="py-16"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: sponsorTiers.length * 0.2 }}
-            >
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="p-8 mb-12">
-                        <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-center mb-4 text-red-400"
-                            initial={{ opacity: 0, y: 20 }}
+            {/* Content */}
+            <div className="relative z-10 flex-1 pt-28 md:pt-32 pb-16">
+                {/* Hero Section */}
+                <motion.section
+                    className="relative py-24 md:py-32 lg:py-40"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 via-transparent to-black/50" />
+                    <div className="container mx-auto px-4 md:px-6 relative z-10">
+                        <motion.div
+                            className="text-center"
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.3 + sponsorTiers.length * 0.2 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            Our Supporters
-                        </motion.h2>
-                        <motion.p
-                            className="text-white/70 text-center text-lg"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 + sponsorTiers.length * 0.2 }}
-                        >
-                            Thank you to all our supporting partners
-                        </motion.p>
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent">
+                                Our Sponsors
+                            </h1>
+                            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+                                Meet the incredible organizations that make TEDxBITS Hyderabad possible.
+                                Their support drives innovation and spreads ideas worth sharing.
+                            </p>
+                        </motion.div>
                     </div>
+                </motion.section>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                        {additionalSponsors.map((sponsor, sponsorIndex) => (
-                            <SponsorCard
-                                key={sponsor.name}
-                                sponsor={sponsor}
-                                index={sponsorIndex}
-                            />
-                        ))}
+                {/* Sponsor Tiers */}
+                {sponsorTiers.map((tier, index) => (
+                    <SponsorTierSection key={tier.title} tier={tier} index={index} />
+                ))}
+
+                {/* Additional Sponsors Section */}
+                <motion.section
+                    className="py-16"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: sponsorTiers.length * 0.2 }}
+                >
+                    <div className="container mx-auto px-4 md:px-6">
+                        <div className="p-8 mb-12">
+                            <motion.h2
+                                className="text-4xl md:text-5xl font-bold text-center mb-4 text-red-400"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.3 + sponsorTiers.length * 0.2 }}
+                            >
+                                Our Supporters
+                            </motion.h2>
+                            <motion.p
+                                className="text-white/70 text-center text-lg"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.4 + sponsorTiers.length * 0.2 }}
+                            >
+                                Thank you to all our supporting partners
+                            </motion.p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                            {additionalSponsors.map((sponsor, sponsorIndex) => (
+                                <SponsorCard
+                                    key={sponsor.name}
+                                    sponsor={sponsor}
+                                    index={sponsorIndex}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </motion.section>
+                </motion.section>
 
+            </div>
 
+            <div className="relative z-10">
+                <Footer />
+            </div>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button" // Assuming shadcn Button
 import { Linkedin } from "lucide-react" // Using Lucide React for LinkedIn icon
 import { config } from "@/data/config"
 import Footer from "@/components/Footer"
+import DotGrid from "@/components/ui/dot-grid"
 
 // --- CONFIGURATION AND SETTINGS ---
 // These settings are defined here for easy access and modification.
@@ -134,7 +135,7 @@ function HeroSection({ text }: { text: { bold: string; rest: string } }) {
     return (
         <section
             ref={ref}
-            className="relative h-[100dvh] flex items-center justify-center bg-black text-white overflow-hidden z-10"
+            className="relative h-[100dvh] flex items-center justify-center text-white overflow-hidden"
         >
             <motion.h1
                 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center leading-tight px-4"
@@ -173,7 +174,7 @@ function AboutTextSection({ aboutTED, aboutTEDx }: AboutTextSectionProps) {
     const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]) // Apply the same range to both
 
     return (
-        <section ref={ref} className="relative py-24 md:py-32 bg-black text-white z-20">
+        <section ref={ref} className="relative py-24 md:py-32 text-white">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 {" "}
                 {/* Changed max-w-6xl to max-w-7xl */}
@@ -379,8 +380,21 @@ export default function AboutUsPage() {
         <SmoothScrollProvider>
             {/* Removed 'overflow-hidden' from this main div to allow Lenis to control scrolling */}
             <div className="about-us-page relative flex flex-col min-h-[100dvh] bg-black">
+                {/* Background grid spanning entire page - fixed position */}
+                <div className="pointer-events-none fixed inset-0 z-0 opacity-100">
+                    <DotGrid
+                        dotSize={20}
+                        gap={24}
+                        baseColor="#4a4a4a"
+                        activeColor="#eb0027"
+                        proximity={170}
+                        shockRadius={300}
+                        shockStrength={6}
+                        className="[mask-image:radial-gradient(circle_at_center,white,transparent_98%)]"
+                    />
+                </div>
                 {/* Main content area with layers */}
-                <main className="relative w-full flex-1">
+                <main className="relative w-full flex-1 z-10">
                     {/* Navbar (fixed, transparent, disappears on scroll) */}
 
                     {/* Scroll Progress Indicator */}

@@ -14,66 +14,82 @@ interface SponsorTier {
 
 const sponsorTiers: SponsorTier[] = [
     {
-        title: "Diamond Sponsors",
-        subtitle: "Our Premier Partners",
-        tierColor: "text-red-300",
-        bgGradient: "from-red-500/10 to-blue-500/10",
+        title: "Platinum Sponsor",
+        subtitle: "Our Premier Partner",
+        tierColor: "text-gray-200",
+        bgGradient: "from-gray-400/10 to-gray-300/10",
         sponsors: [
-            { name: "Microsoft", logo: "/data/logos/microsoft.png" },
-            { name: "Adobe", logo: "/data/logos/adobe.png" }
+            { name: "Platinum Sponsor", logo: "/sponsors-2020/sponsor1_2024.png" }
         ]
     },
     {
-        title: "Gold Sponsors",
-        subtitle: "Our Elite Partners",
+        title: "Food Partner",
+        subtitle: "Fueling Innovation",
+        tierColor: "text-orange-400",
+        bgGradient: "from-orange-500/10 to-amber-500/10",
+        sponsors: [
+            { name: "Food Partner", logo: "/sponsors-2020/sponsor2_2024.png" }
+        ]
+    },
+    {
+        title: "Logistics Partner",
+        subtitle: "Keeping Us Moving",
+        tierColor: "text-blue-400",
+        bgGradient: "from-blue-500/10 to-cyan-500/10",
+        sponsors: [
+            { name: "Logistics Partner", logo: "/sponsors-2020/sponsor3_2024.png" }
+        ]
+    },
+    {
+        title: "Travel Partner",
+        subtitle: "Making Connections Possible",
+        tierColor: "text-green-400",
+        bgGradient: "from-green-500/10 to-emerald-500/10",
+        sponsors: [
+            { name: "Travel Partner", logo: "/sponsors-2020/sponsor4_2024.png" }
+        ]
+    },
+    {
+        title: "Gaming Partner",
+        subtitle: "Powering Play",
+        tierColor: "text-purple-400",
+        bgGradient: "from-purple-500/10 to-violet-500/10",
+        sponsors: [
+            { name: "Gaming Partner", logo: "/sponsors-2020/sponsor5_2024.png" }
+        ]
+    },
+    {
+        title: "Luxury Partner",
+        subtitle: "Elevating Excellence",
         tierColor: "text-yellow-400",
         bgGradient: "from-yellow-500/10 to-amber-500/10",
         sponsors: [
-            { name: "Netflix", logo: "/data/logos/netflix.png" },
-            { name: "Apple", logo: "/data/logos/apple.png" },
-            { name: "Nike", logo: "/data/logos/nike.png" },
-            { name: "AMD", logo: "/data/logos/amd.png" }
-        ]
-    },
-    {
-        title: "Silver Sponsors",
-        subtitle: "Our Valued Partners",
-        tierColor: "text-gray-300",
-        bgGradient: "from-gray-500/10 to-slate-500/10",
-        sponsors: [
-            { name: "Facebook", logo: "/data/logos/facebook.png" },
-            { name: "Twitter", logo: "/data/logos/twitter.png" },
-            { name: "YouTube", logo: "/data/logos/youtube.png" },
-            { name: "Spotify", logo: "/data/logos/spotify.png" },
-            { name: "Twitch", logo: "/data/logos/twitch.png" },
-            { name: "Telegram", logo: "/data/logos/telegram.png" }
-        ]
-    },
-    {
-        title: "Bronze Sponsors",
-        subtitle: "Our Supporting Partners",
-        tierColor: "text-orange-400",
-        bgGradient: "from-orange-500/10 to-amber-600/10",
-        sponsors: [
-            { name: "McDonald's", logo: "/data/logos/mcdonalds.png" },
-            { name: "Google Play", logo: "/data/logos/google-play.png" },
-            { name: "App Store", logo: "/data/logos/app-store.png" },
-            { name: "Prime", logo: "/data/logos/prime.png" },
-            { name: "Electronics Arts", logo: "/data/logos/electronics-arts.png" },
-            { name: "Maps", logo: "/data/logos/maps.png" }
+            { name: "Luxury Partner", logo: "/sponsors-2020/sponsor6_2024.png" }
         ]
     }
 ]
 
+const additionalSponsors = [
+    { name: "Sponsor 7", logo: "/sponsors-2020/sponsor7_2024.png" },
+    { name: "Audi", logo: "/sponsors-2020/audi.png" },
+    { name: "SBI", logo: "/sponsors-2020/sbi.png" },
+    { name: "Sky Events", logo: "/sponsors-2020/skyevents.jpg" },
+    { name: "Red Bull", logo: "/sponsors-2020/2.png" },
+    { name: "Portronics", logo: "/sponsors-2020/3.png" },
+    { name: "Monster", logo: "/sponsors-2020/4.png" },
+    { name: "Ixigo", logo: "/sponsors-2020/5.png" },
+    { name: "Gamooga", logo: "/sponsors-2020/6.png" }
+]
+
 // List of logos that are completely black and should be inverted to white
-const blackLogos = ['Twitter', 'Apple', 'Nike']
+const blackLogos: string[] = []
 
 const SponsorCard = ({ sponsor, index }: { sponsor: { name: string; logo: string }, index: number }) => {
     const shouldInvert = blackLogos.includes(sponsor.name)
 
     return (
         <motion.div
-            className="p-8 transition-all duration-300 group cursor-pointer"
+            className="p-8 transition-all duration-300 group cursor-pointer max-w-md mx-auto w-full"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -82,7 +98,7 @@ const SponsorCard = ({ sponsor, index }: { sponsor: { name: string; logo: string
             }}
             whileTap={{ scale: 0.98 }}
         >
-            <div className="relative w-full h-40 mb-4 flex items-center justify-center">
+            <div className="relative w-full h-64 mb-6 flex items-center justify-center">
                 <Image
                     src={sponsor.logo}
                     alt={sponsor.name}
@@ -92,7 +108,7 @@ const SponsorCard = ({ sponsor, index }: { sponsor: { name: string; logo: string
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
-            <h3 className="text-white font-semibold text-center group-hover:text-white/90 transition-colors">
+            <h3 className="text-white font-semibold text-center text-lg group-hover:text-white/90 transition-colors">
                 {sponsor.name}
             </h3>
         </motion.div>
@@ -126,7 +142,12 @@ const SponsorTierSection = ({ tier, index }: { tier: SponsorTier, index: number 
                 </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className={cn(
+                "grid gap-8",
+                tier.sponsors.length === 1
+                    ? "grid-cols-1 place-items-center"
+                    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            )}>
                 {tier.sponsors.map((sponsor, sponsorIndex) => (
                     <SponsorCard
                         key={sponsor.name}
@@ -145,7 +166,7 @@ export default function SponsorsPage() {
             {/* Dot Grid Background */}
             <div className="absolute inset-0 opacity-20">
                 <DotGrid
-                    dotSize={8}
+                    dotSize={18}
                     gap={25}
                     baseColor="#eb0027"
                     activeColor="#ffffff"
@@ -187,6 +208,45 @@ export default function SponsorsPage() {
             {sponsorTiers.map((tier, index) => (
                 <SponsorTierSection key={tier.title} tier={tier} index={index} />
             ))}
+
+            {/* Additional Sponsors Section */}
+            <motion.section
+                className="py-16"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: sponsorTiers.length * 0.2 }}
+            >
+                <div className="container mx-auto px-4 md:px-6">
+                    <div className="p-8 mb-12">
+                        <motion.h2
+                            className="text-4xl md:text-5xl font-bold text-center mb-4 text-red-400"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 + sponsorTiers.length * 0.2 }}
+                        >
+                            Our Supporters
+                        </motion.h2>
+                        <motion.p
+                            className="text-white/70 text-center text-lg"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 + sponsorTiers.length * 0.2 }}
+                        >
+                            Thank you to all our supporting partners
+                        </motion.p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        {additionalSponsors.map((sponsor, sponsorIndex) => (
+                            <SponsorCard
+                                key={sponsor.name}
+                                sponsor={sponsor}
+                                index={sponsorIndex}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </motion.section>
 
 
         </div>

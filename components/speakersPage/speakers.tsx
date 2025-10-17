@@ -6,15 +6,17 @@ import 'aos/dist/aos.css';
 import Footer from '../Footer';
 import { IoClose } from 'react-icons/io5';
 
+
+
 // Sample speaker data with info section
 // Sample speaker data with individual social media links
 const speakersData = [
 {
 id: 1,
-name: "THOMAS KEHL",
-title: "Media Entrepreneur and Bestselling Author",
-subtitle: "Co-founder of FINANZFLUSS",
-image: "/speakersPageImages/person.jpg",
+name: "RANVEER BRAR",
+title: "Celebrity chef",
+subtitle: "Renowned culinary artist and TV personality",
+image: "/speakersPageImages/1.webp",
 event: "TEDx BITS Hyderabad",
 theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
@@ -24,10 +26,10 @@ info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who c
 },
 {
 id: 2,
-name: "ADRIAN ROUZBEH",
-title: "Best-selling Author, Entrepreneur",
-subtitle: "& MMA Trainer (Black Belt)",
-image: "/speakersPageImages/person.jpg",
+name: "ZOYA AGARWAL",
+title: "Captain Zoya Agarwal",
+subtitle: "Trailblazing Pilot & Aviation Pioneer",
+image: "/speakersPageImages/2.webp",
 event: "TEDx BITS Hyderabad",
 theme: "MIND / SCAPES",
 instagram: "https://instagram.com/adrianrouzbeh",
@@ -37,10 +39,10 @@ info: "Adrian Rouzbeh is a multi-faceted personality who combines business acume
 },
 {
 id: 3,
-name: "CYNTHIA HANSEN",
-title: "Managing Director, Innovation Foundation",
-subtitle: "Empowered by the Adecco Group",
-image: "/speakersPageImages/person.jpg",
+name: "TRAVIN SINGH",
+title: "Entrepreneur & Innovator",
+subtitle: "Sustainability Advocate & FoodTech Visionary",
+image: "/speakersPageImages/3.webp",
 event: "TEDx BITS Hyderabad",
 theme: "MIND / SCAPES",
 instagram: "https://instagram.com/cynthiahansen",
@@ -50,10 +52,10 @@ info: "Cynthia Hansen is a visionary leader in the field of innovation and workf
 },
 {
 id: 4,
-name: "SARAH JOHNSON",
-title: "Tech Innovator and AI Researcher",
-subtitle: "Founder of FutureTech Labs",
-image: "/speakersPageImages/person.jpg",
+name: "DEVAAGYH DIXIT",
+title: "Musical Prodigy",
+subtitle: "India's Youngest & Fastest Drummer",
+image: "/speakersPageImages/4.webp",
 event: "TEDx BITS Hyderabad",
 theme: "MIND / SCAPES",
 instagram: "https://instagram.com/sarahjohnson",
@@ -63,10 +65,10 @@ info: "Sarah Johnson is a pioneering tech innovator and AI researcher who founde
 },
 {
 id: 5,
-name: "MICHAEL CHEN",
-title: "Sustainability Expert and Climate Activist",
-subtitle: "Director of Green Solutions Inc.",
-image: "/speakersPageImages/person.jpg",
+name: "NIKHIL KAMATH",
+title: "Entrepreneur & Investor",
+subtitle: "Co-founder of Zerodha & True Beacon",
+image: "/speakersPageImages/5.webp",
 event: "TEDx BITS Hyderabad",
 theme: "MIND / SCAPES",
 instagram: "https://instagram.com/michaelchen",
@@ -76,10 +78,49 @@ info: "Michael Chen is a dedicated sustainability expert and climate activist wh
 },
 {
 id: 6,
-name: "ELENA RODRIGUEZ",
-title: "Social Impact Leader and Philanthropist",
-subtitle: "CEO of Change Makers Foundation",
-image: "/speakersPageImages/person.jpg",
+name: "MONIKA SEYFRIED",
+title: "Interaction Designer & Futurist",
+subtitle: "Exploring Ethics, Ecology & Emerging Technologies",
+image: "/speakersPageImages/6.webp",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/elenarodriguez",
+linkedin: "https://linkedin.com/in/elenarodriguez",
+youtube: "https://youtube.com/@changemakersfoundation",
+info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
+},
+{
+id: 7,
+name: "NARPATH RAMAN",
+title: "Mentalist & Mind Reader",
+subtitle: "Blending Mind, Magic & Reality",
+image: "/speakersPageImages/9.webp",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/elenarodriguez",
+linkedin: "https://linkedin.com/in/elenarodriguez",
+youtube: "https://youtube.com/@changemakersfoundation",
+info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
+},
+{
+id: 8,
+name: "DR. PATRIZIA AZZI",
+title: "Social Innovation Leader",
+subtitle: "Bridging Research, Ethics & Human Rights",
+image: "/speakersPageImages/7.webp",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/elenarodriguez",
+linkedin: "https://linkedin.com/in/elenarodriguez",
+youtube: "https://youtube.com/@changemakersfoundation",
+info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
+},
+{
+id: 9,
+name: "MANASA VARANASI",
+title: "Miss India World 2020",
+subtitle: "Engineer, Model & Advocate for Mental Health Awareness",
+image: "/speakersPageImages/8.webp",
 event: "TEDx BITS Hyderabad",
 theme: "MIND / SCAPES",
 instagram: "https://instagram.com/elenarodriguez",
@@ -87,15 +128,25 @@ linkedin: "https://linkedin.com/in/elenarodriguez",
 youtube: "https://youtube.com/@changemakersfoundation",
 info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 }
+
+
+
+
 ];
+
+
 
 // Animated Network Background Component
 const NetworkBackground = () => {
 const canvasRef = useRef(null);
 
+
+
 useEffect(() => {
 const canvas = canvasRef.current;
 const ctx = canvas.getContext('2d');
+
+
 
 // Set canvas size
 const resizeCanvas = () => {
@@ -103,13 +154,19 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 };
 
+
+
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
+
+
 
 // Particle system
 const particles = [];
 const numParticles = 60;
 const maxDistance = 150; // Increased connection distance
+
+
 
 // Create particles
 for (let i = 0; i < numParticles; i++) {
@@ -122,9 +179,13 @@ radius: Math.random() * 1.5 + 1,
 });
 }
 
+
+
 // Animation loop
 const animate = () => {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
 
 // Draw connections first (behind particles)
 for (let i = 0; i < particles.length; i++) {
@@ -133,9 +194,13 @@ const dx = particles[j].x - particles[i].x;
 const dy = particles[j].y - particles[i].y;
 const distance = Math.sqrt(dx * dx + dy * dy);
 
+
+
 if (distance < maxDistance) {
 // Significantly increased opacity with minimum base opacity
 const opacity = Math.max(0.2, (maxDistance - distance) / maxDistance * 0.7);
+
+
 
 // Begin new path for each line
 ctx.beginPath();
@@ -144,6 +209,8 @@ ctx.lineTo(particles[j].x, particles[j].y);
 ctx.strokeStyle = `rgba(236, 0, 36, ${opacity})`; // TEDx red with much higher opacity
 ctx.lineWidth = 1.5; // Thicker lines for better visibility
 ctx.stroke();
+
+
 
 // Add a subtle glow effect for even more prominence
 ctx.beginPath();
@@ -156,11 +223,15 @@ ctx.stroke();
 }
 }
 
+
+
 // Update and draw particles
 particles.forEach((particle) => {
 // Update position
 particle.x += particle.vx;
 particle.y += particle.vy;
+
+
 
 // Bounce off edges
 if (particle.x < 0 || particle.x > canvas.width) {
@@ -172,12 +243,16 @@ particle.vy *= -1;
 particle.y = Math.max(0, Math.min(canvas.height, particle.y));
 }
 
+
+
 // Draw particle (white vertices with subtle glow)
 // Main white dot
 ctx.beginPath();
 ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
 ctx.fillStyle = 'rgba(255, 255, 255, 0.9)'; // Increased opacity for dots
 ctx.fill();
+
+
 
 // Subtle glow around dots
 ctx.beginPath();
@@ -186,15 +261,23 @@ ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
 ctx.fill();
 });
 
+
+
 requestAnimationFrame(animate);
 };
 
+
+
 animate();
+
+
 
 return () => {
 window.removeEventListener('resize', resizeCanvas);
 };
 }, []);
+
+
 
 return (
 <canvas
@@ -206,10 +289,14 @@ style={{ background: 'transparent' }}
 };
 
 
+
+
 // Modal Component for Speaker Details - Fully Responsive
 // Modal Component for Speaker Details - With Social Media Icons
 const SpeakerModal = ({ speaker, isOpen, onClose }) => {
   if (!isOpen || !speaker) return null;
+
+
 
   // Handle social media clicks using speaker's individual links
   const handleSocialClick = (platform) => {
@@ -234,6 +321,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
     }
   };
 
+
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
@@ -241,6 +330,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
         onClick={onClose}
       />
+
+
 
       {/* Modal Content - Wider and More Compact */}
       <div className="relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl overflow-hidden">
@@ -251,6 +342,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
         >
           <IoClose className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
         </button>
+
+
 
         {/* Speaker Image and Info - More Compact Layout */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 mb-6">
@@ -265,6 +358,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
               />
             </div>
           </div>
+
+
 
           {/* Speaker Basic Info - Optimized for wider layout */}
           <div className="flex-1 text-center sm:text-left">
@@ -283,6 +378,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
             </div>
           </div>
         </div>
+
+
 
         {/* Social Media Icons Section - Individual Links */}
         <div className="text-center">
@@ -304,6 +401,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
               </svg>
             </button>
 
+
+
             {/* LinkedIn Icon - Individual Link */}
             <button
               onClick={() => handleSocialClick('linkedin')}
@@ -320,6 +419,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
             </button>
+
+
 
             {/* YouTube Icon - Individual Link */}
             <button
@@ -344,6 +445,8 @@ const SpeakerModal = ({ speaker, isOpen, onClose }) => {
   );
 };
 
+
+
 // Fully Responsive Speaker Card Component
 const SpeakerCard = ({ speaker, index, onClick }) => {
 return (
@@ -360,9 +463,11 @@ src={speaker.image}
 alt={speaker.name}
 fill
 className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
-sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
+sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 33vw"
 />
 </div>
+
+
 
 {/* Event Badge - Enhanced Red Color for BITS Hyderabad */}
 <div className="absolute top-2 sm:top-3 left-2 sm:left-3 right-2 sm:right-3">
@@ -373,6 +478,8 @@ sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33
 </span>
 </div>
 </div>
+
+
 
 {/* Speaker Name - Responsive Typography */}
 <div className="absolute inset-0 flex items-center justify-center">
@@ -387,6 +494,8 @@ sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33
 </div>
 </div>
 
+
+
 {/* Speaker Details - Responsive Bottom Section */}
 <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-4">
 <div className="text-white text-center">
@@ -399,8 +508,12 @@ sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33
 </div>
 </div>
 
+
+
 {/* Hover Overlay Effect */}
 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+
 
 {/* Click indicator */}
 <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/30 rounded-xl sm:rounded-2xl transition-colors duration-300" />
@@ -408,27 +521,39 @@ sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33
 );
 };
 
+
+
 export default function SpeakersPage() {
 const [selectedSpeaker, setSelectedSpeaker] = useState(null);
 const [isModalOpen, setIsModalOpen] = useState(false);
 
+
+
 useEffect(() => {
 AOS.init({
-duration: 800,
+duration: 600, // Reduced from 800ms to 600ms for faster animations
 once: true,
-easing: 'ease-out-cubic'
+easing: 'ease-out-cubic',
+offset: 50, // Reduced from default 120px to 50px - triggers animations much earlier
+anchorPlacement: 'top-bottom', // Animation triggers when top of element hits bottom of viewport
 });
 }, []);
+
+
 
 const handleSpeakerClick = (speaker) => {
 setSelectedSpeaker(speaker);
 setIsModalOpen(true);
 };
 
+
+
 const handleCloseModal = () => {
 setIsModalOpen(false);
 setSelectedSpeaker(null);
 };
+
+
 
 // Prevent body scroll when modal is open
 useEffect(() => {
@@ -438,15 +563,21 @@ document.body.style.overflow = 'hidden';
 document.body.style.overflow = 'unset';
 }
 
+
+
 return () => {
 document.body.style.overflow = 'unset';
 };
 }, [isModalOpen]);
 
+
+
 return (
 <div className="min-h-screen bg-black text-white relative">
 {/* Animated Network Background */}
 <NetworkBackground />
+
+
 
 {/* Header Section - Enhanced Responsive Typography */}
 <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36 relative z-10">
@@ -467,9 +598,11 @@ Nothing would be possible without our <span className="text-[#ec0024] font-semib
 </div>
 </div>
 
-{/* Speakers Grid - Enhanced Responsive Layout */}
-<div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24 relative z-10">
-<div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+
+
+{/* Speakers Grid - 3 Columns with Better Spacing */}
+<div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pb-12 sm:pb-16 md:pb-20 lg:pb-24 relative z-10">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 xl:gap-16">
 {speakersData.map((speaker, index) => (
 <SpeakerCard
 key={speaker.id}
@@ -481,6 +614,8 @@ onClick={handleSpeakerClick}
 </div>
 </div>
 
+
+
 {/* Speaker Details Modal */}
 <SpeakerModal
 speaker={selectedSpeaker}
@@ -488,7 +623,10 @@ isOpen={isModalOpen}
 onClose={handleCloseModal}
 />
 
+
+
 <Footer/>
 </div>
 );
 }
+

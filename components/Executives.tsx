@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Linkedin } from "lucide-react"
 import { config } from "@/data/config"
 import Footer from "@/components/Footer"
+import DotGrid from "@/components/ui/dot-grid"
 
 // --- TYPES ---
 interface TeamMember {
@@ -149,7 +150,7 @@ function ExecutivesHeroSection() {
     return (
         <section
             ref={ref}
-            className="relative h-[100dvh] flex items-center justify-center bg-black text-white overflow-hidden z-10"
+            className="relative h-[100dvh] flex items-center justify-center text-white overflow-hidden"
         >
             <motion.h1
                 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold text-center leading-tight px-4 sm:px-6"
@@ -185,7 +186,7 @@ function TeamSection({ preHeading, mainHeading, teamLabel, description, members 
     const sectionY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"])
 
     return (
-        <section ref={ref} className="relative py-16 sm:py-24 md:py-32 lg:py-48 pb-24 sm:pb-32 md:pb-52 lg:pb-72 bg-black text-white z-30">
+        <section ref={ref} className="relative py-16 sm:py-24 md:py-32 lg:py-48 pb-24 sm:pb-32 md:pb-52 lg:pb-72 text-white">
             <motion.div
                 className="container mx-auto px-4 sm:px-6 md:px-8 max-w-6xl text-center"
                 style={{ y: sectionY }}
@@ -233,7 +234,20 @@ export default function ExecutivesPage() {
     return (
         <SmoothScrollProvider>
             <div className="executives-page relative flex flex-col min-h-[100dvh] bg-black">
-                <main className="relative w-full flex-1">
+                {/* Background grid spanning entire page - fixed position */}
+                <div className="pointer-events-none fixed inset-0 z-0 opacity-100">
+                    <DotGrid
+                        dotSize={20}
+                        gap={24}
+                        baseColor="#4a4a4a"
+                        activeColor="#eb0027"
+                        proximity={170}
+                        shockRadius={300}
+                        shockStrength={6}
+                        className="[mask-image:radial-gradient(circle_at_center,white,transparent_98%)]"
+                    />
+                </div>
+                <main className="relative w-full flex-1 z-10">
                     <ScrollProgressIndicator />
 
                     {/* Hero Section */}
@@ -249,7 +263,9 @@ export default function ExecutivesPage() {
                     />
                 </main>
 
-
+                <div className="relative z-10">
+                    <Footer />
+                </div>
             </div>
         </SmoothScrollProvider>
     )

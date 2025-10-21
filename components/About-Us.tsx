@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button" // Assuming shadcn Button
 import { Linkedin } from "lucide-react" // Using Lucide React for LinkedIn icon
 import { config } from "@/data/config"
 import Footer from "@/components/Footer"
+import DotGrid from "@/components/ui/dot-grid"
 
 // --- CONFIGURATION AND SETTINGS ---
 // These settings are defined here for easy access and modification.
@@ -309,7 +310,7 @@ function HeroSection({ text }: { text: { bold: string; rest: string } }) {
     return (
         <section
             ref={ref}
-            className="relative h-[100dvh] flex items-center justify-center bg-black text-white overflow-hidden z-10"
+            className="relative h-[100dvh] flex items-center justify-center text-white overflow-hidden"
         >
             <motion.h1
                 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center leading-tight px-4"
@@ -348,7 +349,7 @@ function AboutTextSection({ aboutTED, aboutTEDx }: AboutTextSectionProps) {
     const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]) // Apply the same range to both
 
     return (
-        <section ref={ref} className="relative py-24 md:py-32 bg-black text-white z-20">
+        <section ref={ref} className="relative py-24 md:py-32 text-white">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 {" "}
                 {/* Changed max-w-6xl to max-w-7xl */}
@@ -556,7 +557,7 @@ export default function AboutUsPage() {
             <div className="about-us-page relative flex flex-col min-h-[100dvh] bg-black">
                 <NetworkBackground/>
                 {/* Main content area with layers */}
-                <main className="relative w-full flex-1">
+                <main className="relative w-full flex-1 z-10">
                     {/* Navbar (fixed, transparent, disappears on scroll) */}
 
                     {/* Scroll Progress Indicator */}
@@ -571,6 +572,9 @@ export default function AboutUsPage() {
 
                 </main>
 
+                <div className="relative z-10">
+                    <Footer />
+                </div>
             </div>
         </SmoothScrollProvider>
     )

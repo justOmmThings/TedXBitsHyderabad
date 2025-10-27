@@ -5,10 +5,17 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 
 type Speaker = {
+  id?: Number;
   name: string;
   title: string;
+  subtitle: string;
   image: string;
-  description?: string;
+  event: string;
+  theme: string;
+  instagram: string;
+  linkedin: string;
+  youtube: string;
+  info?: string;
 };
 
 export const SpeakerCarousel = ({
@@ -43,7 +50,7 @@ export const SpeakerCarousel = ({
     <div className="relative min-h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-white z-10" />
-      
+
       {/* Main content */}
       <div className="relative z-20 flex flex-col min-h-screen">
         {/* Top section - Main carousel */}
@@ -59,7 +66,7 @@ export const SpeakerCarousel = ({
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="space-y-6"
               >
-                <motion.p 
+                <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
@@ -67,30 +74,30 @@ export const SpeakerCarousel = ({
                 >
                   Our Memorable Speaker
                 </motion.p>
-                
-                <motion.h1 
+
+                <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-red-500 leading-none tracking-tight"
                 >
-                  {speakers[active].name.split(' ').map((word, index) => (
+                  {speakers[active].name.split(" ").map((word, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 50 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ 
-                        delay: 0.4 + (index * 0.1),
+                      transition={{
+                        delay: 0.4 + index * 0.1,
                         duration: 0.6,
-                        ease: "easeOut"
+                        ease: "easeOut",
                       }}
                     >
                       {word}
                     </motion.div>
                   ))}
                 </motion.h1>
-                
-                <motion.p 
+
+                <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
@@ -98,22 +105,22 @@ export const SpeakerCarousel = ({
                 >
                   {speakers[active].title}
                 </motion.p>
-                
-                {speakers[active].description && (
-                  <motion.p 
+
+                {speakers[active].info && (
+                  <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 }}
                     className="text-black/60 text-lg max-w-lg leading-relaxed"
                   >
-                    {speakers[active].description}
+                    {speakers[active].info}
                   </motion.p>
                 )}
               </motion.div>
             </AnimatePresence>
 
             {/* Navigation buttons */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
@@ -153,12 +160,12 @@ export const SpeakerCarousel = ({
                     className="w-full h-auto rounded-2xl shadow-2xl shadow-red-500/10"
                     draggable={false}
                   />
-                  
+
                   {/* Spotlight effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/50 rounded-2xl" />
                 </motion.div>
               </AnimatePresence>
-              
+
               {/* Background geometric shapes */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl" />
               <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-red-500/5 rounded-full blur-lg" />
@@ -168,7 +175,7 @@ export const SpeakerCarousel = ({
 
         {/* Bottom section - Thumbnail carousel */}
         <div className="relative px-8 md:px-16 lg:px-20 pb-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
@@ -191,8 +198,8 @@ export const SpeakerCarousel = ({
                     onClick={() => handleThumbnailClick(index)}
                     className={`relative flex-shrink-0 overflow-hidden rounded-lg transition-all duration-300 ${
                       index === active
-                        ? 'ring-2 ring-red-500 ring-offset-2 ring-offset-gray-900 scale-110'
-                        : 'opacity-60 hover:opacity-80 hover:scale-105'
+                        ? "ring-2 ring-red-500 ring-offset-2 ring-offset-gray-900 scale-110"
+                        : "opacity-60 hover:opacity-80 hover:scale-105"
                     }`}
                     whileHover={{ scale: index === active ? 1.1 : 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -203,7 +210,7 @@ export const SpeakerCarousel = ({
                       className="h-16 w-16 md:h-20 md:w-20 object-cover object-center"
                       draggable={false}
                     />
-                    
+
                     {/* Active overlay */}
                     {index === active && (
                       <motion.div
@@ -212,7 +219,7 @@ export const SpeakerCarousel = ({
                         transition={{ duration: 0.3 }}
                       />
                     )}
-                    
+
                     {/* Hover effect */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                   </motion.button>
@@ -233,10 +240,14 @@ export const SpeakerCarousel = ({
 
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, white 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
       </div>
     </div>
   );

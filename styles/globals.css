@@ -183,7 +183,7 @@ body {
 }
 
 
-/* Enables 3D flipping */
+/* Enable preserve-3d for child transforms */
 .preserve-3d {
   transform-style: preserve-3d;
 }
@@ -196,6 +196,14 @@ body {
   backface-visibility: hidden;
 }
 
-.rotate-y-180 {
+/* Custom rotation */
+.group:hover .group-hover-rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }

@@ -23,7 +23,7 @@ export function HomepageSponsors({ className }: HomepageSponsorsProps) {
     const LogoWrapper = ({ src, alt }: { src: string; alt: string }) => (
         <motion.div
             className={cn(
-                "p-4 flex-shrink-0 min-w-fit cursor-pointer",
+                "p-4 flex-shrink-0 min-w-fit cursor-pointer group",
                 config.animation.useGlassyBg &&
                 "bg-white/10 backdrop-blur-md rounded-xl shadow-md border border-white/10"
             )}
@@ -36,9 +36,9 @@ export function HomepageSponsors({ className }: HomepageSponsorsProps) {
             <Image
                 src={src}
                 alt={alt}
-                width={180}
-                height={90}
-                className="max-h-[90px] w-auto filter grayscale"
+                width={300}
+                height={150}
+                className="max-h-[150px] w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
             />
         </motion.div>
     )

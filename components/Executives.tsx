@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import { Linkedin } from "lucide-react"
 import { config } from "@/data/config"
 import Footer from "@/components/Footer"
-import DotGrid from "@/components/ui/dot-grid"
 
 // --- TYPES ---
 interface TeamMember {
@@ -57,6 +56,161 @@ function ScrollProgressIndicator() {
         <motion.div
             className="fixed top-0 left-0 right-0 h-1 bg-[#eb0027] z-[51] origin-[0%]"
             style={{ scaleX }}
+        />
+    )
+}
+
+// --- NETWORK BACKGROUND COMPONENT ---
+const NetworkBackground = () => {
+    const canvasRef = useRef<HTMLCanvasElement>(null)
+    const animationIdRef = useRef<number | undefined>(undefined)
+
+    useEffect(() => {
+        const canvas = canvasRef.current
+        if (!canvas) return
+
+        const ctx = canvas.getContext('2d')
+        if (!ctx) return
+
+        // Set canvas size
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
+        }
+
+        resizeCanvas()
+
+        // Particle system
+        const particles: Array<{
+            x: number
+            y: number
+            vx: number
+            vy: number
+            radius: number
+        }> = []
+        const numParticles = 60
+        const maxDistance = 150
+
+        // Create particles
+        for (let i = 0; i < numParticles; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.8,
+                vy: (Math.random() - 0.5) * 0.8,
+                radius: Math.random() * 1.5 + 1,
+            })
+        }
+
+        let isRunning = true
+
+        // Animation loop
+        const animate = () => {
+            if (!isRunning || !canvas || !ctx) return
+
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+            // Draw connections first (behind particles)
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[j].x - particles[i].x
+                    const dy = particles[j].y - particles[i].y
+                    const distance = Math.sqrt(dx * dx + dy * dy)
+
+                    if (distance < maxDistance) {
+                        // Significantly increased opacity with minimum base opacity
+                        const opacity = Math.max(0.2, (maxDistance - distance) / maxDistance * 0.7)
+
+                        // Begin new path for each line
+                        ctx.beginPath()
+                        ctx.moveTo(particles[i].x, particles[i].y)
+                        ctx.lineTo(particles[j].x, particles[j].y)
+                        ctx.strokeStyle = `rgba(236, 0, 36, ${opacity})` // TEDx red with much higher opacity
+                        ctx.lineWidth = 1.5 // Thicker lines for better visibility
+                        ctx.stroke()
+
+                        // Add a subtle glow effect for even more prominence
+                        ctx.beginPath()
+                        ctx.moveTo(particles[i].x, particles[i].y)
+                        ctx.lineTo(particles[j].x, particles[j].y)
+                        ctx.strokeStyle = `rgba(255, 100, 120, ${opacity * 0.3})` // Lighter red glow
+                        ctx.lineWidth = 3
+                        ctx.stroke()
+                    }
+                }
+            }
+
+            // Update and draw particles
+            particles.forEach((particle) => {
+                // Update position
+                particle.x += particle.vx
+                particle.y += particle.vy
+
+                // Bounce off edges
+                if (particle.x < 0 || particle.x > canvas.width) {
+                    particle.vx *= -1
+                    particle.x = Math.max(0, Math.min(canvas.width, particle.x))
+                }
+                if (particle.y < 0 || particle.y > canvas.height) {
+                    particle.vy *= -1
+                    particle.y = Math.max(0, Math.min(canvas.height, particle.y))
+                }
+
+                // Draw particle (white vertices with subtle glow)
+                // Main white dot
+                ctx.beginPath()
+                ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.9)' // Increased opacity for dots
+                ctx.fill()
+
+                // Subtle glow around dots
+                ctx.beginPath()
+                ctx.arc(particle.x, particle.y, particle.radius * 2, 0, Math.PI * 2)
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.1)'
+                ctx.fill()
+            })
+
+            // Continue animation
+            animationIdRef.current = requestAnimationFrame(animate)
+        }
+
+        // Start animation
+        animate()
+
+        // Handle resize
+        const handleResize = () => {
+            resizeCanvas()
+            // Recreate particles for new canvas size
+            particles.length = 0
+            for (let i = 0; i < numParticles; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.8,
+                    vy: (Math.random() - 0.5) * 0.8,
+                    radius: Math.random() * 1.5 + 1,
+                })
+            }
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        // Cleanup function
+        return () => {
+            isRunning = false
+            if (animationIdRef.current) {
+                cancelAnimationFrame(animationIdRef.current)
+            }
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
+
+    return (
+        <canvas
+            ref={canvasRef}
+            className="fixed inset-0 pointer-events-none z-0"
+            style={{ background: 'transparent' }}
         />
     )
 }
@@ -234,19 +388,8 @@ export default function ExecutivesPage() {
     return (
         <SmoothScrollProvider>
             <div className="executives-page relative flex flex-col min-h-[100dvh] bg-black">
-                {/* Background grid spanning entire page - fixed position */}
-                <div className="pointer-events-none fixed inset-0 z-0 opacity-100">
-                    <DotGrid
-                        dotSize={20}
-                        gap={24}
-                        baseColor="#4a4a4a"
-                        activeColor="#eb0027"
-                        proximity={170}
-                        shockRadius={300}
-                        shockStrength={6}
-                        className="[mask-image:radial-gradient(circle_at_center,white,transparent_98%)]"
-                    />
-                </div>
+                {/* Background particles spanning entire page - fixed position */}
+                <NetworkBackground />
                 <main className="relative w-full flex-1 z-10">
                     <ScrollProgressIndicator />
 

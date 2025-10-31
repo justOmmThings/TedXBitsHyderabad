@@ -10,8 +10,9 @@ import { IoClose } from 'react-icons/io5';
 
 // Sample speaker data with info section
 // Sample speaker data with individual social media links
-const speakersData = [
-  {
+export const speakersData = [
+
+{
 id: 1,
 name: "SUBASHISH PANI",
 title: "Business Leader",

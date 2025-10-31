@@ -184,6 +184,19 @@ export interface HomepageAboveFooterConfig {
     ctas: { text: string; button: { label: string; link: string } }[];
 }
 
+// --- Gallery Page ---
+export interface GallerySlide {
+    src: string;
+    alt: string;
+}
+
+export interface GalleryConfig {
+    heading: string;            // e.g. "Gallery"
+    highlight?: string;         // optional part of heading to color differently
+    description: string;        // lead paragraph under heading
+    slides: GallerySlide[];     // carousel slides
+}
+
 // =========================
 // Config Sections
 // =========================
@@ -238,17 +251,17 @@ export const aboutSection: AboutSectionConfig = {
 export const aboutPageSection: AboutPageSectionConfig = {
     mainHeading: {
         bold: "TED",
-        rest: " is a nonprofit organization devoted to ideas worth spreading",
+        rest: " is a nonprofit devoted to ideas worth spreading",
     },
     aboutTED: {
         heading: "About ",
         highlight: "TED",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque.",
+        text: "TED is a nonprofit devoted to ideas worth spreading. Started in 1984 as a conference where Technology, Entertainment, and Design converged, TED today covers almost every topic imaginable — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world. TED's mission is to discover and spread ideas that spark imagination, embrace possibility, and catalyze impact.",
     },
     aboutTEDx: {
         heading: "About ",
         highlight: "TEDx",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque.",
+        text: "TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized and managed by volunteers in their local communities.",
     },
     teamSection: {
         preHeading: "The",
@@ -257,93 +270,93 @@ export const aboutPageSection: AboutPageSectionConfig = {
             rest: " BITS Hyderabad",
         },
         teamLabel: "TEAM",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque. Integer euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget aliquam massa nisl quis neque.",
+        description: "Behind every great TEDx event is a dedicated team of passionate individuals working tirelessly to bring ideas worth spreading to life. Our organizing committee comprises students from BITS Pilani, Hyderabad Campus who share a common vision of fostering intellectual curiosity and meaningful dialogue. From content curation to logistics, design to outreach, each team member plays a crucial role in creating an unforgettable experience that inspires our community and beyond.",
         members: [
             {
                 name: "Tushya Jain",
                 role: "Licensee",
-                photo: "data/aizen png.jpg",
-                quote: "Yokoso. Watashino soul society des.",
+                photo: "/2025_executives/tushya.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/alice",
                 contactInfo: "alice@tedx.com",
             },
             {
                 name: "Akshat Kumar",
                 role: "Co-Licensee",
-                photo: "data/kindpng_4521044.png",
-                quote: "Bankai",
+                photo: "/2025_executives/akshat.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/bob",
                 contactInfo: "bob@tedx.com",
             },
             {
                 name: "Madhava Rao",
                 role: "Lead Curator",
-                photo: "data/PikPng.com_bleach-png_2927872.png",
-                quote: "Bankai Konin Biraki Benihime Aratame",
+                photo: "/2025_executives/madhava.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/charlie",
                 contactInfo: "charlie@tedx.com",
             },
             {
                 name: "Shashwat Jha",
                 role: "Speaker Research Head",
-                photo: "/data/PikPng.com_kenpachi-zaraki-png_4048741.png",
-                quote: "Spreading ideas, one story at a time.",
+                photo: "/2025_executives/shashwat.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/diana",
                 contactInfo: "diana@tedx.com",
             },
             {
                 name: "Jainam Parekh",
                 role: "Guest Relations Head",
-                photo: "/data/placeholder-user.jpg",
-                quote: "Ichimonji",
+                photo: "/2025_executives/jainam.jpg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/eve",
                 contactInfo: "eve@tedx.com",
             },
             {
                 name: "Neha Bhagwat",
                 role: "Strategic Initiatives Head",
-                photo: "/data/placeholder-user.jpg",
-                quote: "Bankai Zanka no Tachi",
+                photo: "/2025_executives/neha.jpg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/frank",
                 contactInfo: "frank@tedx.com",
             },
             {
                 name: "Shraddhanjali Sahoo",
                 role: "Sponsorship Head",
-                photo: "/data/placeholder-user.jpg",
-                quote: "Bankai Katen Kyōkotsu: Karamatsu Shinjū",
+                photo: "/2025_executives/shraddhanjali.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/frank",
                 contactInfo: "frank@tedx.com",
             },
             {
                 name: "Suhani Sha",
                 role: "Events Head",
-                photo: "/data/placeholder-user.jpg",
-                quote: "Bankai Katen Kyōkotsu: Karamatsu Shinjū",
+                photo: "/2025_executives/suhani.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/frank",
                 contactInfo: "frank@tedx.com",
             },
             {
                 name: "Harini Ramanan",
                 role: "Multimedia and Production Lead",
-                photo: "/data/placeholder-user.jpg",
-                quote: "Bankai Katen Kyōkotsu: Karamatsu Shinjū",
+                photo: "/2025_executives/harini.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/frank",
                 contactInfo: "frank@tedx.com",
             },
             {
                 name: "Ritansh Kulshreshth",
                 role: "Design Head",
-                photo: "/data/placeholder-user.jpg",
-                quote: "Bankai Katen Kyōkotsu: Karamatsu Shinjū",
+                photo: "/2025_executives/ritansh.jpg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/frank",
                 contactInfo: "frank@tedx.com",
             },
             {
-                name: "Aadesh Oswal",
+                name: "Sarvesh Vaswani",
                 role: "Public Relations Head",
-                photo: "/data/placeholder-user.jpg",
-                quote: "Bankai Katen Kyōkotsu: Karamatsu Shinjū",
+                photo: "/2025_executives/sarvesh.jpeg",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/frank",
                 contactInfo: "frank@tedx.com",
             },
@@ -351,7 +364,7 @@ export const aboutPageSection: AboutPageSectionConfig = {
                 name: "Suprasad Mishra",
                 role: "Tech Head",
                 photo: "/data/placeholder-user.jpg",
-                quote: "Bankai Katen Kyōkotsu: Karamatsu Shinjū",
+                quote: " ",
                 linkedin: "https://linkedin.com/in/frank",
                 contactInfo: "frank@tedx.com",
             },
@@ -400,10 +413,11 @@ export const previousSpeakers: Speaker[] = [
 
 // --- Navigation URLs ---
 export const navigation: NavigationLink[] = [
-    { label: "Gallery", href: "/events", icon: "Image" },
+    { label: "Gallery", href: "/gallery", icon: "Image" },
     { label: "Speakers", href: "/speakers", icon: "Users" },
-    { label: "Executives", href: "/about", icon: "UserCheck" },
-    { label: "Contact", href: "/contact", icon: "Mail" },
+    { label: "Sponsors", href: "/sponsors", icon: "Users" },
+    { label: "Executives", href: "/executives", icon: "UserCheck" },
+    { label: "About Us", href: "/about", icon: "Mail" },
 
 ];
 
@@ -526,7 +540,7 @@ export const footer: FooterConfig = {
         { label: "GALLERY", url: "/events" },
         { label: "ABOUT", url: "/about" },
         { label: "CONTACT US", url: "#" },
-        
+
     ],
     rightLinks: [
         { label: "SPONSOR", url: "#" },
@@ -570,6 +584,40 @@ export const homepageAboveFooter: HomepageAboveFooterConfig = {
     ],
 };
 
+// --- Gallery Page Config ---
+export const gallery: GalleryConfig = {
+    heading: "Gallery",
+    highlight: "Gallery", // currently entire word highlighted; adjust if you want partial
+    description:
+        "From electrifying speaker experiences to moving performances and more, take a look at some of the all-time great moments that have molded our annual events and invigorated the incredible city we call home.",
+    slides: [
+        {
+            src: "/data/anna-dziubinska-mVhd5QVlDWw-unsplash.jpg",
+            alt: "Audience illuminated in warm light at a TEDx style event",
+        },
+        {
+            src: "/data/davide-ragusa-gcDwzUGuUoI-unsplash.jpg",
+            alt: "Silhouettes of people in a large hall with dramatic lighting",
+        },
+        {
+            src: "/data/henry-be-IicyiaPYGGI-unsplash.jpg",
+            alt: "Stage lights shining through atmospheric haze",
+        },
+        {
+            src: "/data/v2osk-1Z2niiBPg5A-unsplash.jpg",
+            alt: "Abstract architectural ceiling with geometric light pattern",
+        },
+        {
+            src: "/data/blake-verdoorn-cssvEZacHvQ-unsplash.jpg",
+            alt: "Audience illuminated in warm light at a TEDx style event",
+        },
+        {
+            src: "/data/johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
+            alt: "Audience illuminated in warm light at a TEDx style event",
+        },
+    ],
+};
+
 // =========================
 // Main Config Export
 // =========================
@@ -590,4 +638,5 @@ export const config = {
     footer,
     homepageBelowHeader,
     homepageAboveFooter,
+    gallery,
 }; 

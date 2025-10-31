@@ -8,6 +8,8 @@ import { Dialog } from "@/components/ui/dialog" // Assuming shadcn Dialog
 import { Button } from "@/components/ui/button" // Assuming shadcn Button
 import { Linkedin } from "lucide-react" // Using Lucide React for LinkedIn icon
 import { config } from "@/data/config"
+import Footer from "@/components/Footer"
+import DotGrid from "@/components/ui/dot-grid"
 
 // --- CONFIGURATION AND SETTINGS ---
 // These settings are defined here for easy access and modification.
@@ -308,7 +310,7 @@ function HeroSection({ text }: { text: { bold: string; rest: string } }) {
     return (
         <section
             ref={ref}
-            className="relative h-[100dvh] flex items-center justify-center bg-black text-white overflow-hidden z-10"
+            className="relative h-[100dvh] flex items-center justify-center text-white overflow-hidden"
         >
             <motion.h1
                 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-center leading-tight px-4"
@@ -347,7 +349,7 @@ function AboutTextSection({ aboutTED, aboutTEDx }: AboutTextSectionProps) {
     const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]) // Apply the same range to both
 
     return (
-        <section ref={ref} className="relative py-24 md:py-32 bg-black text-white z-20">
+        <section ref={ref} className="relative py-24 md:py-32 text-white">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 {" "}
                 {/* Changed max-w-6xl to max-w-7xl */}
@@ -494,10 +496,10 @@ function TeamSection({ preHeading, mainHeading, teamLabel, description, members 
     })
 
     // Parallax effect for the entire section content
-    const sectionY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]) // Adjusted range for noticeable effect
+    const sectionY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]) // Reduced range to lessen perceived overlap
 
     return (
-        <section ref={ref} className="relative py-32 md:py-48 bg-black text-white z-30">
+        <section ref={ref} className="relative py-32 md:py-48 pb-52 md:pb-72 bg-black text-white z-30">
             <motion.div
                 className="container mx-auto px-4 md:px-6 max-w-6xl text-center"
                 style={{ y: sectionY }} // Apply parallax to the entire content container
@@ -555,7 +557,7 @@ export default function AboutUsPage() {
             <div className="about-us-page relative flex flex-col min-h-[100dvh] bg-black">
                 <NetworkBackground/>
                 {/* Main content area with layers */}
-                <main className="relative w-full flex-1">
+                <main className="relative w-full flex-1 z-10">
                     {/* Navbar (fixed, transparent, disappears on scroll) */}
 
                     {/* Scroll Progress Indicator */}
@@ -567,15 +569,12 @@ export default function AboutUsPage() {
                     {/* Layer 2: About Text Columns */}
                     <AboutTextSection aboutTED={aboutPageConfig.aboutTED} aboutTEDx={aboutPageConfig.aboutTEDx} />
 
-                    {/* Layer 3: Team Members Section */}
-                    <TeamSection
-                        preHeading={aboutPageConfig.teamSection.preHeading}
-                        mainHeading={aboutPageConfig.teamSection.mainHeading}
-                        teamLabel={aboutPageConfig.teamSection.teamLabel}
-                        description={aboutPageConfig.teamSection.description}
-                        members={aboutPageConfig.teamSection.members}
-                    />
+
                 </main>
+
+                <div className="relative z-10">
+                    <Footer />
+                </div>
             </div>
         </SmoothScrollProvider>
     )

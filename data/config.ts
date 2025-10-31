@@ -590,28 +590,16 @@ export const gallery: GalleryConfig = {
         "From electrifying speaker experiences to moving performances and more, take a look at some of the all-time great moments that have molded our annual events and invigorated the incredible city we call home.",
     slides: [
         {
-            src: "/data/anna-dziubinska-mVhd5QVlDWw-unsplash.jpg",
+            src: "/data/dsc_2349.jpg",
             alt: "Audience illuminated in warm light at a TEDx style event",
         },
         {
-            src: "/data/davide-ragusa-gcDwzUGuUoI-unsplash.jpg",
+            src: "/data/750_0004.jpg",
             alt: "Silhouettes of people in a large hall with dramatic lighting",
         },
         {
-            src: "/data/henry-be-IicyiaPYGGI-unsplash.jpg",
+            src: "/data/dsc_4896.jpg",
             alt: "Stage lights shining through atmospheric haze",
-        },
-        {
-            src: "/data/v2osk-1Z2niiBPg5A-unsplash.jpg",
-            alt: "Abstract architectural ceiling with geometric light pattern",
-        },
-        {
-            src: "/data/blake-verdoorn-cssvEZacHvQ-unsplash.jpg",
-            alt: "Audience illuminated in warm light at a TEDx style event",
-        },
-        {
-            src: "/data/johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
-            alt: "Audience illuminated in warm light at a TEDx style event",
         },
     ],
 };

@@ -23,7 +23,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 2,
@@ -36,7 +36,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 3,
@@ -49,7 +49,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 4,
@@ -62,7 +62,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 5,
@@ -75,7 +75,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 6,
@@ -88,7 +88,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 7,
@@ -101,7 +101,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 8,
@@ -114,7 +114,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 9,
@@ -127,7 +127,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/thomaskehl",
 linkedin: "https://linkedin.com/in/thomaskehl",
 youtube: "https://youtube.com/@finanzfluss",
-info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+// info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
 id: 10,
@@ -140,7 +140,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/adrianrouzbeh",
 linkedin: "https://linkedin.com/in/adrianrouzbeh",
 youtube: "https://youtube.com/@adrianrouzbeh",
-info: "Adrian Rouzbeh is a multi-faceted personality who combines business acumen with martial arts expertise. As a bestselling author, he has written extensively about personal development, discipline, and achieving peak performance. His entrepreneurial ventures span multiple industries, while his black belt in MMA demonstrates his commitment to physical and mental excellence. Adrian believes in the power of discipline and mental fortitude to overcome any obstacle in life."
+// info: "Adrian Rouzbeh is a multi-faceted personality who combines business acumen with martial arts expertise. As a bestselling author, he has written extensively about personal development, discipline, and achieving peak performance. His entrepreneurial ventures span multiple industries, while his black belt in MMA demonstrates his commitment to physical and mental excellence. Adrian believes in the power of discipline and mental fortitude to overcome any obstacle in life."
 },
 {
 id: 11,
@@ -153,7 +153,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/cynthiahansen",
 linkedin: "https://linkedin.com/in/cynthiahansen",
 youtube: "https://youtube.com/@cynthiahansen",
-info: "Cynthia Hansen is a visionary leader in the field of innovation and workforce development. As Managing Director of the Innovation Foundation, empowered by the Adecco Group, she spearheads initiatives that bridge the gap between emerging technologies and human potential. With a background in organizational psychology and change management, Cynthia has been instrumental in helping companies navigate digital transformation while maintaining their human-centered approach."
+// info: "Cynthia Hansen is a visionary leader in the field of innovation and workforce development. As Managing Director of the Innovation Foundation, empowered by the Adecco Group, she spearheads initiatives that bridge the gap between emerging technologies and human potential. With a background in organizational psychology and change management, Cynthia has been instrumental in helping companies navigate digital transformation while maintaining their human-centered approach."
 },
 {
 id: 12,
@@ -166,7 +166,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/sarahjohnson",
 linkedin: "https://linkedin.com/in/sarahjohnson",
 youtube: "https://youtube.com/@futuretechlabs",
-info: "Sarah Johnson is a pioneering tech innovator and AI researcher who founded FutureTech Labs, a cutting-edge research facility focused on artificial intelligence and machine learning applications. With a PhD in Computer Science from MIT, Sarah has published over 50 research papers and holds multiple patents in AI technology. She is passionate about ethical AI development and ensuring technology serves humanity's best interests."
+// info: "Sarah Johnson is a pioneering tech innovator and AI researcher who founded FutureTech Labs, a cutting-edge research facility focused on artificial intelligence and machine learning applications. With a PhD in Computer Science from MIT, Sarah has published over 50 research papers and holds multiple patents in AI technology. She is passionate about ethical AI development and ensuring technology serves humanity's best interests."
 },
 {
 id: 13,
@@ -179,7 +179,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/michaelchen",
 linkedin: "https://linkedin.com/in/michaelchen",
 youtube: "https://youtube.com/@greensolutions",
-info: "Michael Chen is a dedicated sustainability expert and climate activist who serves as Director of Green Solutions Inc. With over 15 years of experience in environmental conservation and renewable energy, Michael has led numerous projects that have significantly reduced carbon footprints for major corporations. He holds a Master's degree in Environmental Science and is a certified sustainability professional who believes in the power of collective action to combat climate change."
+// info: "Michael Chen is a dedicated sustainability expert and climate activist who serves as Director of Green Solutions Inc. With over 15 years of experience in environmental conservation and renewable energy, Michael has led numerous projects that have significantly reduced carbon footprints for major corporations. He holds a Master's degree in Environmental Science and is a certified sustainability professional who believes in the power of collective action to combat climate change."
 },
 {
 id: 14,
@@ -192,7 +192,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/elenarodriguez",
 linkedin: "https://linkedin.com/in/elenarodriguez",
 youtube: "https://youtube.com/@changemakersfoundation",
-info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
+// info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 },
 {
 id: 15,
@@ -205,7 +205,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/elenarodriguez",
 linkedin: "https://linkedin.com/in/elenarodriguez",
 youtube: "https://youtube.com/@changemakersfoundation",
-info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
+// info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 },
 {
 id: 16,
@@ -218,7 +218,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/elenarodriguez",
 linkedin: "https://linkedin.com/in/elenarodriguez",
 youtube: "https://youtube.com/@changemakersfoundation",
-info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
+// info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 },
 {
 id: 17,
@@ -231,7 +231,7 @@ theme: "MIND / SCAPES",
 instagram: "https://instagram.com/elenarodriguez",
 linkedin: "https://linkedin.com/in/elenarodriguez",
 youtube: "https://youtube.com/@changemakersfoundation",
-info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
+// info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 }
 
 ];

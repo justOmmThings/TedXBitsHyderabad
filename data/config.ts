@@ -411,11 +411,11 @@ export const previousSpeakers: Speaker[] = [
 
 // --- Navigation URLs ---
 export const navigation: NavigationLink[] = [
-    { label: "Gallery", href: "/gallery", icon: "Image" },
     { label: "Speakers", href: "/speakers", icon: "Users" },
     { label: "Sponsors", href: "/sponsors", icon: "Users" },
     { label: "Executives", href: "/executives", icon: "UserCheck" },
     { label: "About Us", href: "/about", icon: "Mail" },
+    { label: "Gallery", href: "/gallery", icon: "Image" },
 
 ];
 

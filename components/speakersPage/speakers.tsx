@@ -14,6 +14,110 @@ export const speakersData = [
 
 {
 id: 1,
+name: "SUBASHISH PANI",
+title: "Business Leader",
+subtitle: "Visionary entrepreneur and innovation strategist",
+image: "/speakersPageImages/img2.JPG",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 2,
+name: "RISHIKESH SR",
+title: "Tech Visionary",
+subtitle: "Pioneering innovation in digital solutions",
+image: "/speakersPageImages/img5.jpg",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 3,
+name: "VIIVEK MASHRU",
+title: "Creative Director",
+subtitle: "Crafting compelling narratives and experiences",
+image: "/speakersPageImages/img1.jpg",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 4,
+name: "MITHOON",
+title: "Singer-Composer",
+subtitle: "Renowned for captivating compositions and performances",
+image: "/speakersPageImages/img4.jpg",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 5,
+name: "NEETA LULLA",
+title: "Costume designer",
+subtitle: "Celebrated couturier redefining Indian elegance",
+image: "/speakersPageImages/img7.jpg",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 6,
+name: "ARUN TIWARI",
+title: "Missile Scientist",
+subtitle: "Pioneering India's aerospace and defense technology",
+image: "/speakersPageImages/img3.jpg",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 7,
+name: "PANKAJ BHADOURIA",
+title: "Celebrity Chef",
+subtitle: "India's first MasterChef and culinary educator",
+image: "/speakersPageImages/img8.jpg",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 8,
+name: "ANUBHA BAJAJ",
+title: "Indie Pop Artist",
+subtitle: "Creating soulful indie melodies that connect hearts",
+image: "/speakersPageImages/img6.jpg",
+event: "TEDx BITS Hyderabad",
+theme: "MIND / SCAPES",
+instagram: "https://instagram.com/thomaskehl",
+linkedin: "https://linkedin.com/in/thomaskehl",
+youtube: "https://youtube.com/@finanzfluss",
+info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
+},
+{
+id: 9,
 name: "RANVEER BRAR",
 title: "Celebrity chef",
 subtitle: "Renowned culinary artist and TV personality",
@@ -26,7 +130,7 @@ youtube: "https://youtube.com/@finanzfluss",
 info: "Thomas Kehl is a renowned media entrepreneur and bestselling author who co-founded FINANZFLUSS, one of Germany's leading financial education platforms. With over 10 years of experience in digital media and financial literacy, Thomas has helped millions of people understand complex financial concepts through engaging content. He is passionate about democratizing financial education and making investment knowledge accessible to everyone. His expertise spans across digital marketing, content creation, and financial markets."
 },
 {
-id: 2,
+id: 10,
 name: "ZOYA AGARWAL",
 title: "Captain Zoya Agarwal",
 subtitle: "Trailblazing Pilot & Aviation Pioneer",
@@ -39,7 +143,7 @@ youtube: "https://youtube.com/@adrianrouzbeh",
 info: "Adrian Rouzbeh is a multi-faceted personality who combines business acumen with martial arts expertise. As a bestselling author, he has written extensively about personal development, discipline, and achieving peak performance. His entrepreneurial ventures span multiple industries, while his black belt in MMA demonstrates his commitment to physical and mental excellence. Adrian believes in the power of discipline and mental fortitude to overcome any obstacle in life."
 },
 {
-id: 3,
+id: 11,
 name: "TRAVIN SINGH",
 title: "Entrepreneur & Innovator",
 subtitle: "Sustainability Advocate & FoodTech Visionary",
@@ -52,7 +156,7 @@ youtube: "https://youtube.com/@cynthiahansen",
 info: "Cynthia Hansen is a visionary leader in the field of innovation and workforce development. As Managing Director of the Innovation Foundation, empowered by the Adecco Group, she spearheads initiatives that bridge the gap between emerging technologies and human potential. With a background in organizational psychology and change management, Cynthia has been instrumental in helping companies navigate digital transformation while maintaining their human-centered approach."
 },
 {
-id: 4,
+id: 12,
 name: "DEVAAGYH DIXIT",
 title: "Musical Prodigy",
 subtitle: "India's Youngest & Fastest Drummer",
@@ -65,7 +169,7 @@ youtube: "https://youtube.com/@futuretechlabs",
 info: "Sarah Johnson is a pioneering tech innovator and AI researcher who founded FutureTech Labs, a cutting-edge research facility focused on artificial intelligence and machine learning applications. With a PhD in Computer Science from MIT, Sarah has published over 50 research papers and holds multiple patents in AI technology. She is passionate about ethical AI development and ensuring technology serves humanity's best interests."
 },
 {
-id: 5,
+id: 13,
 name: "NIKHIL KAMATH",
 title: "Entrepreneur & Investor",
 subtitle: "Co-founder of Zerodha & True Beacon",
@@ -78,7 +182,7 @@ youtube: "https://youtube.com/@greensolutions",
 info: "Michael Chen is a dedicated sustainability expert and climate activist who serves as Director of Green Solutions Inc. With over 15 years of experience in environmental conservation and renewable energy, Michael has led numerous projects that have significantly reduced carbon footprints for major corporations. He holds a Master's degree in Environmental Science and is a certified sustainability professional who believes in the power of collective action to combat climate change."
 },
 {
-id: 6,
+id: 14,
 name: "MONIKA SEYFRIED",
 title: "Interaction Designer & Futurist",
 subtitle: "Exploring Ethics, Ecology & Emerging Technologies",
@@ -91,7 +195,7 @@ youtube: "https://youtube.com/@changemakersfoundation",
 info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 },
 {
-id: 7,
+id: 15,
 name: "NARPATH RAMAN",
 title: "Mentalist & Mind Reader",
 subtitle: "Blending Mind, Magic & Reality",
@@ -104,7 +208,7 @@ youtube: "https://youtube.com/@changemakersfoundation",
 info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 },
 {
-id: 8,
+id: 16,
 name: "DR. PATRIZIA AZZI",
 title: "Social Innovation Leader",
 subtitle: "Bridging Research, Ethics & Human Rights",
@@ -117,7 +221,7 @@ youtube: "https://youtube.com/@changemakersfoundation",
 info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 },
 {
-id: 9,
+id: 17,
 name: "MANASA VARANASI",
 title: "Miss India World 2020",
 subtitle: "Engineer, Model & Advocate for Mental Health Awareness",
@@ -129,9 +233,6 @@ linkedin: "https://linkedin.com/in/elenarodriguez",
 youtube: "https://youtube.com/@changemakersfoundation",
 info: "Elena Rodriguez is a passionate social impact leader and philanthropist who serves as CEO of the Change Makers Foundation. Her organization has impacted over 100,000 lives through education, healthcare, and community development programs across Latin America. Elena's approach combines strategic thinking with grassroots activism, and she has been recognized by the UN for her innovative approaches to sustainable development and social change."
 }
-
-
-
 
 ];
 

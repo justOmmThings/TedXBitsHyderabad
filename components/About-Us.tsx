@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button" // Assuming shadcn Button
 import { Linkedin } from "lucide-react" // Using Lucide React for LinkedIn icon
 import { config } from "@/data/config"
 import Footer from "@/components/Footer"
-import DotGrid from "@/components/ui/dot-grid"
 
 // --- CONFIGURATION AND SETTINGS ---
 // These settings are defined here for easy access and modification.
@@ -30,38 +29,31 @@ interface TeamMember {
 // Animated Network Background Component
 const NetworkBackground = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const animationIdRef = useRef<number>();
+    const animationIdRef = useRef<number | undefined>(undefined);
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        if (!canvas) return;
-        
+        if (!canvas) {
+            console.log('About-Us: Canvas ref is null');
+            return;
+        }
+
         const ctx = canvas.getContext('2d');
-        if (!ctx) return;
+        if (!ctx) {
+            console.log('About-Us: Could not get canvas context');
+            return;
+        }
+
+        console.log('About-Us: NetworkBackground initialized', { width: window.innerWidth, height: window.innerHeight });
 
         // Set canvas size
         const resizeCanvas = () => {
-            const dpr = window.devicePixelRatio || 1;
-            const rect = canvas.getBoundingClientRect();
-            
-            // Set actual size in memory (scaled for high DPI displays)
-            canvas.width = rect.width * dpr;
-            canvas.height = rect.height * dpr;
-            
-            // Scale the canvas down using CSS
-            canvas.style.width = rect.width + 'px';
-            canvas.style.height = rect.height + 'px';
-            
-            // Scale the drawing context so everything draws at the correct size
-            ctx.scale(dpr, dpr);
-            
-            // Update viewport size for particle system
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         };
 
         resizeCanvas();
-        
+
         // Particle system
         const particles: Array<{
             x: number;
@@ -189,11 +181,8 @@ const NetworkBackground = () => {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 w-full h-full pointer-events-none"
-            style={{ 
-                zIndex: -1,
-                background: 'transparent'
-            }}
+            className="fixed inset-0 pointer-events-none z-0"
+            style={{ background: 'transparent' }}
         />
     );
 };
@@ -555,7 +544,7 @@ export default function AboutUsPage() {
         <SmoothScrollProvider>
             {/* Removed 'overflow-hidden' from this main div to allow Lenis to control scrolling */}
             <div className="about-us-page relative flex flex-col min-h-[100dvh] bg-black">
-                <NetworkBackground/>
+                <NetworkBackground />
                 {/* Main content area with layers */}
                 <main className="relative w-full flex-1 z-10">
                     {/* Navbar (fixed, transparent, disappears on scroll) */}
